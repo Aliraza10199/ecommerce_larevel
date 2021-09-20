@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\category;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 class CategoryController extends Controller
 {
     /**
@@ -40,22 +40,36 @@ class CategoryController extends Controller
 
              $result['category_name']=$arr['0']->category_name;
              $result['category_slug']=$arr['0']->category_slug;
+             $result['parent_category_id']=$arr['0']->parent_category_id;
+             $result['category_image']=$arr['0']->category_image;
+             $result['is_home']=$arr['0']->is_home;
+             $result['is_home_selected']="";
+             if($arr['0']->is_home==1)
+             {
+                 $result['is_home_selected']="checked";
+             }
              //varible for ID 
              $result['id']=$arr['0']->id;
             //  $result['data']['category_slug']=$arr['0']->category_slug;
- 
+            $result['categorylist']=DB::table('categories')->where(['status'=>1])->where('id','!=',$id)->get(); 
+
  
          }else{
              $result['category_name']='';
              $result['category_slug']='';
+             $result['parent_category_id']='';
+             $result['category_image']='';
+             $result['is_home_selected']="";
+
+             $result['is_home']='';
              $result['id']=0;
  
- 
+             $result['categorylist']=DB::table('categories')->where(['status'=>1])->get(); 
+
          }
         //  echo '<pre>';
         //  print_r($result['data']);
         //  die();
- 
          return view('adminpanal.manage_category',$result);
      }
 
@@ -70,6 +84,7 @@ class CategoryController extends Controller
        $request->validate([
 
         'category_name'=>'required',
+        'category_image'=>'mimes:jpeg,jpg,png',
         'category_slug'=>'required|unique:categories,category_slug,'.$request->post('id'),
        ]);
 
@@ -86,8 +101,27 @@ class CategoryController extends Controller
        }
 
 
+        //for upload image code
+        if($request->hasfile('category_image')){
+            $image=$request->file('category_image');
+            //seprate img extention
+            $ext=$image->extension();
+            //make img name $ concatinate with extension
+            $image_name=time().'.'.$ext;
+            $image->storeAs('/public/media/category',$image_name);
+            $model->category_image=$image_name;
+        }
+
+       //retrive
        $model->category_name=$request->post('category_name');
        $model->category_slug=$request->post('category_slug');
+       $model->parent_category_id=$request->post('parent_category_id');
+       
+    //    by defalt value is 0
+       $model->is_home=0;
+      if($request->post('is_home')!=null){
+        $model->is_home=1;
+      }
        $model->status=1;
        $model->save();
 

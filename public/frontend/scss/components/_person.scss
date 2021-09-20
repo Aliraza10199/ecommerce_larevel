@@ -1,0 +1,40 @@
+.person-row {
+  margin: -30px -5px 0;
+  & > [class*='col-'] {
+    float: none;
+    margin-top: 30px;
+    padding: 0 5px;
+  }
+}
+
+.person-item {
+  img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+  & > *:first-child {
+    margin-top: 0;
+  }
+}
+
+.person-item-title {
+  color: $text_color_dark;
+  margin-top: 34px;
+  padding: 0 5px;
+  @media screen and (max-width: $screen-md-max) {
+    margin-top: 24px;
+  }
+  @media screen and (max-width: $screen-sm-max) {
+    margin-top: 18px;
+  }
+}
+
+.person-item-post {
+  &:not(:first-child) {
+    margin-top: 7px;
+  }
+  padding: 0 5px;
+  font-size: 12px;
+  line-height: 17px;
+}

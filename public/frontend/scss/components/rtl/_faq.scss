@@ -1,0 +1,38 @@
+/* faq rtl */
+
+.faq-item {
+  .panel > .panel-heading {
+    margin-right: 28px;
+    margin-left: auto;
+  }
+  .panel-body {
+    padding: 20px 28px 20px 0;
+    @media (max-width: $screen-sm-max) {
+      padding: 10px 28px 10px 0;
+    }
+  }
+  .panel > .panel-heading:after {
+    left: auto;
+    right: -28px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.simple-filter-tabs {
+  & > span {
+    &:first-child {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+      margin-left: 0;
+    }
+    span {
+      display: inline-block;
+      padding-left: 0;
+      padding-right: 10px;
+    }
+  }
+}

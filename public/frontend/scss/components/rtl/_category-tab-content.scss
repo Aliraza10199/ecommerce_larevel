@@ -1,0 +1,12 @@
+/* tab category rtl */
+
+.tab-category.nav-tabs {
+  &:not(.text-center) > *:first-child {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  &:not(.text-center) > *:last-child {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}

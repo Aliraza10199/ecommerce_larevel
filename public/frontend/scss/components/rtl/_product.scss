@@ -1,0 +1,236 @@
+/* product rtl */
+
+.prd-img-area [class*='label-']:not(.label-wishlist) {
+  left: auto;
+  right: 9px;
+}
+
+.prd-img-area .label-wishlist {
+  left: 14px;
+  right: auto;
+}
+
+.data-to-show-4.prd-grid:not(.listing-view) .prd-action,
+[class*='col-md'] .data-to-show-3.prd-grid:not(.listing-view) .prd-action {
+  .form-group {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .btn:first-child, form:not(:only-child) {
+    margin-left: 5px;
+    margin-right: 0;
+  }
+}
+
+.data-to-show-5.prd-grid:not(.listing-view) .prd-action {
+  .form-group {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .btn:first-child, form:not(:only-child) {
+    margin-left: 5px;
+    margin-right: 0;
+  }
+}
+
+.prd-options .label-options {
+  & + .list-options {
+    margin-right: 10px;
+    margin-left: 0;
+  }
+}
+
+.prd-grid, .prd-promo, .single-prd-carousel {
+  .btn:first-child, form:not(:only-child) {
+    margin-left: 15px;
+    margin-right: 0;
+  }
+  @media screen and (max-width: $screen-md-max) {
+    .btn:first-child + .prd-hidemobile {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg-min) {
+  .prd-grid:not(.listing-view) .prd:not([class*='-simple']).hovered .prd-inside {
+    left: auto;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: $screen-md-max) {
+  .prd-grid:not(.listing-view) .prd:not(.prd-horizontal-simple) {
+    .prd-action {
+      .btn {
+        margin-right: 0;
+        margin-left: 0;
+      }
+      .form-group, form {
+        margin-left: 0 !important;
+      }
+    }
+  }
+}
+
+.prd-grid:not(.listing-view) .prd:not(.prd-horizontal-simple) {
+  .prd-action {
+    .btn.dropdown-toggle {
+      border-left: 0;
+      border-right-width: 1px;
+    }
+  }
+}
+
+.prd-hor {
+  @media screen and (min-width: $screen-sm-min) {
+    .prd-img-area {
+      margin-left: 15px;
+      margin-right: 0;
+      float: right;
+    }
+  }
+  .prd-info {
+    @media screen and (min-width: $screen-sm-min) {
+      float: right;
+      padding: 25px 5px 25px 28px;
+    }
+    @include respond-to(lg-only) {
+      padding: 20px 5px 20px 28px;
+    }
+    @media screen and (max-width: $screen-xs-max) {
+      padding: 25px 15px 65px;
+    }
+  }
+  &.vert-dots .slick-dots {
+    left: 20px;
+    right: auto;
+  }
+}
+
+@media screen and (min-width: $screen-lg-min) {
+  .aside .prd-hor {
+    .prd-info {
+      width: 49%;
+      padding: 5px 5px 5px 28px;
+    }
+    &.vert-dots .slick-dots {
+      left: 20px;
+      right: auto;
+    }
+  }
+}
+
+.prd-grid.listing-view .prd {
+  margin: 40px 2px 0 0;
+  .prd-img-area {
+    margin-right: 0;
+    margin-left: 15px;
+    float: right;
+  }
+  .prd-info {
+    float: right;
+    padding: 10px 5px 10px 28px;
+  }
+}
+
+.title-with-right .prd-carousel-tabs {
+  @media screen and (min-width: $screen-md-min) {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+.mmenu-left .prd-carousel-vert {
+  &.prd-carousel-vert-striped {
+    .prd-vertical-sm {
+      border-right-width: 0;
+      border-left-width: 1px;
+      border-left-style: solid;
+    }
+  }
+}
+
+.mmenu-right .prd-carousel-vert {
+  &.prd-carousel-vert-striped {
+    .prd-vertical-sm {
+      border-left-width: 0;
+      border-right-width: 1px;
+      border-right-style: solid;
+    }
+  }
+}
+
+.prd-vertical-sm {
+  .prd-img {
+    float: right;
+  }
+  .prd-info {
+    float: left;
+  }
+  [class*='label-'] {
+    left: auto;
+    right: 0;
+  }
+}
+
+.filters-prd {
+  & > * {
+    &:not(:first-child) {
+      margin-right: 20px;
+      margin-left: 0;
+    }
+  }
+}
+
+.prd-simple {
+  &:before {
+    left: auto;
+    right: 0;
+  }
+  &:nth-child(odd):after {
+    right: auto;
+    left: 0;
+  }
+}
+
+.prd-carousel-banner.bnr--center .slick-arrows-squared .slick-next {
+  right: 50%;
+  left: auto;
+  transform: translateX(calc(100% + 10px));
+}
+
+.prd-carousel-banner.bnr--center .slick-arrows-squared .slick-prev {
+  right: 50%;
+  left: auto;
+  transform: translateX(calc(-10px));
+}
+
+.single-prd-carousel {
+  @media (max-width: $screen-sm-max) {
+    .prd {
+      .prd-img-area {
+        margin-right: 0;
+        margin-left: 15px;
+        float: right;
+      }
+      .prd-info {
+        float: right;
+        padding: 15px 0 15px 10px;
+      }
+    }
+    .slick-dots {
+      position: relative;
+      top: auto;
+      bottom: -15px;
+    }
+  }
+}
+
+.prd-horizontal-simple {
+  .prd-action {
+    left: 9px;
+    right: auto;
+  }
+}

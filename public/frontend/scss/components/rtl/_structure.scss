@@ -1,0 +1,75 @@
+/* structure rtl */
+
+@media (min-width: $screen-md-min) {
+  .title-with-right > *:last-child {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+.title-with-arrows:not(.title-with-arrows--center) {
+  & > *:last-child {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .carousel-arrows .slick-next {
+    left: 25px;
+    right: auto;
+  }
+  .carousel-arrows .slick-prev {
+    left: 0;
+    right: auto;
+  }
+  h2,
+  h2.h1-style {
+    padding-right: 0;
+    padding-left: 45px;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .aside {
+    order: 1;
+  }
+  .aside--left {
+    order: 2;
+  }
+  .aside--right {
+    order: 0
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .chess-left-bg {
+    right: 15px;
+    left: auto;
+    & + [class*='col-'] {
+      float: right;
+    }
+  }
+  .chess-right-bg {
+    right: 50%;
+    left: auto;
+    top: 0;
+    & + [class*='col-'] {
+      float: right;
+    }
+  }
+  .row-chess {
+    & > [class*='col-'].pull-right {
+      margin-left: inherit;
+      margin-right: auto;
+    }
+  }
+}
+
+@media screen and (max-width: ($mobile-menu-breikpoint - 1)) {
+  #fp-nav.fp-right {
+    left: 0 !important;
+    right: auto !important;
+  }
+}
+
+.dropdown-menu {
+  text-align: right;
+}

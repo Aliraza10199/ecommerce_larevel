@@ -1,0 +1,12 @@
+/* card image & text rtl */
+
+.card-imgtext-wrap {
+  .row {
+    &:not(.flex-row-reverse) > *:last-child {
+      text-align: left;
+    }
+    &.flex-row-reverse > *:first-child {
+      text-align: left;
+    }
+  }
+}

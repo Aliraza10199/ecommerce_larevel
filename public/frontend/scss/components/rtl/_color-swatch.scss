@@ -1,0 +1,71 @@
+/* color swatch rtl */
+
+.color-swatch {
+  li {
+    float: right;
+  }
+}
+
+/* color list */
+.sidebar-block {
+  .color-list {
+    li {
+      a {
+        span.value {
+          float: right;
+        }
+        span.colorname {
+          padding: 6px 5px 0 5px;
+        }
+      }
+    }
+    li.active {
+      a {
+        padding-left: 14px;
+        padding-right: 0;
+      }
+      a:before {
+        left: 0;
+        right: auto;
+        padding: 0 6px 0 0;
+      }
+    }
+  }
+}
+
+.prd-block {
+  .color-list {
+    li {
+      a {
+        span.value {
+          float: right;
+        }
+      }
+    }
+    li.absent-option > a:after {
+      left: 2px;
+      right: 3px;
+    }
+  }
+}
+
+.color-list--sm {
+  li {
+    margin: 0 0 6px 3px;
+    &.active:before {
+      left: -10px;
+      right: auto;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-sm-max) {
+  .color-list--sm {
+    li {
+      &.active:before {
+        left: -10px;
+        right: auto;
+      }
+    }
+  }
+}

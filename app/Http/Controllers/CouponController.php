@@ -41,6 +41,9 @@ class CouponController extends Controller
               $result['title']=$arr['0']->title;
               $result['code']=$arr['0']->code;
               $result['value']=$arr['0']->value;
+              $result['type']=$arr['0']->type;
+              $result['min_order_amt']=$arr['0']->min_order_amt;
+              $result['is_one_time']=$arr['0']->is_one_time;
               //varible for ID 
               $result['id']=$arr['0']->id;
              //  $result['data']['category_slug']=$arr['0']->category_slug;
@@ -50,6 +53,9 @@ class CouponController extends Controller
               $result['title']='';
               $result['code']='';
               $result['value']='';
+              $result['type']='';
+              $result['min_order_amt']='';
+              $result['is_one_time']='';
               $result['id']=0;
   
   
@@ -86,12 +92,16 @@ class CouponController extends Controller
         }else{
             $model=new Coupon(); 
             $msg='Copuon inserted';
+            $model->status=1;
         }
  
  
         $model->title=$request->post('title');
         $model->code=$request->post('code');
         $model->value=$request->post('value');
+        $model->type=$request->post('type');
+        $model->min_order_amt=$request->post('min_order_amt');
+        $model->is_one_time=$request->post('is_one_time');
         $model->status=1;
         $model->save();
  
@@ -128,72 +138,4 @@ class CouponController extends Controller
     }
 
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-     /**
-      * Store a newly created resource in storage.
-      *
-      * @param  \Illuminate\Http\Request  $request
-      * @return \Illuminate\Http\Response
-      */
-     public function store(Request $request)
-     {
-         //
-     }
- 
-     /**
-      * Display the specified resource.
-      *
-      * @param  \App\Models\category  $category
-      * @return \Illuminate\Http\Response
-      */
-     public function show(category $category)
-     {
-         //
-     }
- 
-     /**
-      * Show the form for editing the specified resource.
-      *
-      * @param  \App\Models\category  $category
-      * @return \Illuminate\Http\Response
-      */
-     public function edit(category $category)
-     {
-         //
-     }
- 
-     /**
-      * Update the specified resource in storage.
-      *
-      * @param  \Illuminate\Http\Request  $request
-      * @param  \App\Models\category  $category
-      * @return \Illuminate\Http\Response
-      */
-     public function update(Request $request, category $category)
-     {
-         //
-     }
- 
-     /**
-      * Remove the specified resource from storage.
-      *
-      * @param  \App\Models\category  $category
-      * @return \Illuminate\Http\Response
-      */
-     public function destroy(category $category)
-     {
-         //
-     } 
 }

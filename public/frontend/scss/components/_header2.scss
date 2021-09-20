@@ -1,0 +1,95 @@
+/* header 02 */
+@media screen and (min-width: $mobile-menu-breikpoint) {
+  .hdr-style-2:not(.hdr--transparent):not(.hdr--dark) .hdr-content {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: $header_border_color;
+  }
+  .hdr-style-2 {
+    .hdr-content {
+      padding: 19px 0;
+      & > .container {
+        @include flexbox();
+        @include align-items(center);
+        text-align: center;
+        & > * {
+          flex: 1 0 0;
+        }
+        .hdr-content-right {
+          text-align: right;
+        }
+        .hdr-content-left {
+          text-align: left;
+        }
+        .hdr-content-right,
+        .hdr-content-left {
+          & > * {
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+        .links-holder {
+          & > * {
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+    .logo {
+      width: 200px;
+      margin: 0 auto;
+    }
+    .nav-holder {
+      margin: 0;
+      .hdr-nav {
+        margin: 0;
+        min-height: 60px;
+      }
+    }
+    .dropdn_wishlist {
+      .dropdn-link > .icon {
+        font-size: 23px;
+      }
+      .dropdn-link span {
+        display: none;
+      }
+    }
+    .dropdn_settings .dropdn-content .container {
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(space-between);
+      ul:not(:only-child) li span + span {
+        display: none;
+      }
+      .dropdn:nth-child(4) ul li span + span {
+        display: none;
+      }
+      .vert-divider:first-child {
+        display: none;
+      }
+      .vert-divider:first-child + ul li span + span {
+        display: inherit;
+      }
+      .vert-divider {
+        width: 1px;
+        background-color: $header_border_color;
+      }
+    }
+    .dropdn_settings .dropdn-content .container .dropdn:nth-child(4) ul li:not(.active) span:first-child:not(:only-child):not(:hover) {
+      color: $header_dropdown_color;
+    }
+    .mmenu-submenu {
+      margin-top: -1px;
+    }
+  }
+}
+
+@media screen and (max-width: ($mobile-menu-breikpoint - 1)) {
+  .hdr-wrap .hdr-style-2 .hdr-mobile {
+    border-bottom-width: 0;
+  }
+  body:not(.home-page):not(.has-sticky) .hdr-wrap .hdr-style-2 .hdr-mobile:not(.is-sticky) .hdr-content {
+    padding: 10px 0 8vw;
+  }
+}

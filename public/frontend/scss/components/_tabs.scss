@@ -1,0 +1,415 @@
+.nav-tabs:not(.tab-category) {
+  padding: 0;
+  list-style: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $tabs-border_color;
+  &:not(:first-child) {
+    margin-top: 30px;
+  }
+  > li {
+    position: relative;
+    margin-bottom: -2px;
+    .nav-link {
+      position: relative;
+      overflow: hidden;
+      padding: 10px 18px;
+      border-color: transparent;
+      border-radius: 0;
+      color: $tabs-link_color;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 11px;
+      font-family: $heading_font_family;
+      line-height: 16px;
+      text-align: center;
+      @include transition (background-color .2s ease);
+      &:after {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-color: $tabs-link-hover_bg;
+        content: '';
+        @include transition (all .2s ease);
+      }
+      &:hover, &:focus {
+        &:after {
+          top: 0;
+        }
+      }
+      &.active {
+        &, &:hover, &:focus {
+          padding: 10px 18px;
+          background-color: transparent;
+          border-width: 1px 1px 0 1px;
+          border-style: solid;
+          border-color: $tabs-border_color;
+          color: $tabs-link-active_color;
+        }
+      }
+    }
+  }
+}
+
+.nav-tabs.center-tabs {
+  text-align: center;
+  > li {
+    display: inline-block;
+    float: none;
+    margin-right: -4px;
+    vertical-align: top;
+  }
+}
+
+.nav-tabs.right-tabs {
+  text-align: right;
+  > li {
+    display: inline-block;
+    float: none;
+    margin-right: -4px;
+    vertical-align: top;
+  }
+}
+
+.nav-tabs.nav-tabs--style2 {
+  border-bottom: 0;
+  > li {
+    margin-bottom: 0;
+    .nav-link {
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 10px 25px;
+      color: $tabs-link_color;
+      border-width: 1px;
+      border-style: solid;
+      border-color: $tabs_border_color;
+      &:hover, &:focus {
+        &:after {
+          top: 0;
+        }
+      }
+      &.active {
+        &, &:hover, &:focus {
+          border-width: 1px;
+          padding: 10px 25px;
+          border-color: $tabs2-active_border_color;
+          background-color: $tabs2-active_bg;
+          color: $tabs2-active_color;
+        }
+      }
+    }
+  }
+}
+
+.nav-tabs.nav-tabs--style3 {
+  border-bottom: 0;
+  > li {
+    margin-bottom: 0;
+    .nav-link {
+      margin: 0;
+      padding: 10px 15px;
+      color: $tabs-link_color;
+      border: 0;
+      font-size: 14px;
+      line-height: 16px;
+      font-family: $heading_font_family;
+      font-weight: 500;
+      &:hover, &:focus {
+        &:after {
+          top: 0;
+        }
+      }
+      &.active {
+        &, &:hover, &:focus {
+          border-width: 0;
+          padding: 10px 15px;
+          border-color: transparent;
+          background-color: transparent;
+          color: $tabs3-active_color;
+        }
+      }
+    }
+  }
+}
+
+.tabs-left, .tabs-right {
+  border-bottom: none;
+  display: inline-block;
+}
+
+.tabs-left:not(.nav-tabs--style2):not(.nav-tabs--style3) {
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-color: $tabs-border_color;
+}
+
+.tabs-right:not(.nav-tabs--style2):not(.nav-tabs--style3) {
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-color: $tabs-border_color;
+}
+
+.tabs-left {
+  & > li, & > li {
+    float: none;
+    margin-bottom: 2px;
+  }
+  & > li {
+    margin-right: -1px;
+  }
+  & > li {
+    margin-left: -1px;
+  }
+  & > li.active > a, & > li.active > a:hover, & > li.active > a:focus {
+    border-width: 1px 0 1px 1px;
+  }
+  & > li > a {
+    margin-right: 0;
+    display: block;
+  }
+}
+
+.tabs-right {
+  & > li.active > a, & > li.active > a:hover, & > li.active > a:focus {
+    border-width: 1px 1px 1px 0;
+  }
+  & > li > a {
+    margin-right: 0;
+  }
+}
+
+.tab-content {
+  position: relative;
+  z-index: 1;
+  & > .tab-pane {
+    display: none;
+    padding: 40px 0 0;
+    border: 0;
+    & > *:not(:first-child):not(p):not(.clearfix):not(.row) {
+      margin-top: 35px;
+      @media screen and (max-width: $screen-sm-max) {
+        margin-top: 20px;
+      }
+    }
+    & > p:not(:first-child) {
+      margin-top: 25px;
+    }
+    & > p + p {
+      margin-top: 20px;
+    }
+    &:only-child {
+      margin-bottom: 0;
+    }
+  }
+  & > .active {
+    display: block;
+  }
+  .table {
+    font-size: 11px;
+    line-height: 1.5em;
+    font-family: $heading_font_family;
+  }
+}
+
+.panel {
+  background: transparent;
+}
+
+.panel-body {
+  & > *:not(:first-child):not(p) {
+    margin-top: 25px;
+  }
+  & > p {
+    margin-top: 25px;
+  }
+  & > p + p {
+    margin-top: 20px;
+  }
+  &:only-child {
+    margin-bottom: 0;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+
+.panel {
+  border: 0;
+  @include box-shadow-clear;
+}
+
+.panel-title, .panel-heading, .panel-group .panel {
+  border-radius: 0;
+}
+
+.panel-heading {
+  padding: 0;
+  border-bottom: 0;
+  border-radius: 0;
+  a {
+    display: block;
+    padding: 13px 40px 13px 0;
+    color: $panel-heading-link_color;
+  }
+  &.active a {
+    color: $panel-heading-link-active_color;
+  }
+}
+
+.panel-title {
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.panel > .panel-heading {
+  position: relative;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  border-color: $panel-heading-border_color;
+  background-color: transparent;
+  &:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 0;
+    margin-top: -15px;
+    padding-left: 2px;
+    width: 30px;
+    height: 30px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $panel-heading-arrow-border_color;
+    pointer-events: none;
+    @include transition (.2s);
+  }
+  &:after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -14px;
+    padding-left: 2px;
+    width: 30px;
+    height: 30px;
+    content: "\e919";
+    text-align: center;
+    font-size: 14px;
+    font-family: 'icomoon';
+    line-height: 28px;
+    pointer-events: none;
+    @include transition (.2s);
+  }
+}
+
+.panel > .panel-heading.active {
+  &:after {
+    color: $panel-heading-link-active_color;
+    @include rotate(90deg);
+    margin-top: -15px;
+    padding-top: 1px;
+  }
+  &:before {
+    border-color: $panel-heading-link-active_color;
+  }
+}
+
+.panel > .panel-heading:hover {
+  &:after {
+    border-color: $panel-heading-link-active_color;
+  }
+}
+
+.panel-group .panel + .panel {
+  margin-top: 0;
+}
+
+.panel-group .panel + .panel > .panel-heading {
+  border-top: 0;
+}
+
+.panel-group .panel-heading + .panel-collapse > .panel-body {
+  padding: 15px 0;
+  border-top: 0;
+  border-bottom: 1px solid $panel-heading-border_color;
+}
+
+.params-row {
+  margin: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+    min-width: 50px;
+    text-align: center;
+  }
+}
+
+.steps-progress {
+  .nav-tabs {
+    flex-wrap: nowrap;
+    @media screen and (max-width: $screen-xs-max) {
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+      border: 0;
+    }
+  }
+  .nav-tabs:not(.tab-category) > li {
+    max-width: 25%;
+    @media screen and (max-width: $screen-xs-max) {
+      flex-wrap: wrap;
+      max-width: 100%;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  .nav-tabs:not(.tab-category) > li .nav-link {
+    @include flexbox();
+    padding: 10px 0;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: inherit;
+    border: 0;
+    background-color: transparent;
+    @include transition(.2s);
+    @media screen and (max-width: $screen-xs-max) {
+      @include align-items(center)
+    }
+    &:hover, &:focus, &:active, &.active {
+      padding: 10px 0;
+      border: 0;
+      background-color: transparent;
+      &:after {
+        display: none;
+      }
+    }
+    &:not(.active) {
+      opacity: .3;
+    }
+    &:hover {
+      opacity: 1;
+    }
+    span:first-child {
+      position: relative;
+      top: 3px;
+      padding: 0 8px;
+      font-size: 36px;
+      font-weight: 400;
+      @media screen and (max-width: $screen-xs-max) {
+        top: -4px;
+        font-size: 30px;
+      }
+    }
+  }
+  .progress {
+    margin-top: -1px;
+    height: 4px;
+    border-radius: 0;
+  }
+  .progress-bar {
+    background-color: $custom_color;
+  }
+}

@@ -10,11 +10,7 @@ use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     // condition when user login and want to go back without logout 
     public function index(Request $request)
     {
@@ -29,22 +25,9 @@ class AdminController extends Controller
         return view('adminpanal.login');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+ 
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+   
     
     // auth funtion use for Data check verify validate
     public function auth(Request $request)
@@ -58,7 +41,12 @@ class AdminController extends Controller
       
     //   check for email ID
         $result=Admin::where(['email'=>$email])->first();
-
+        // for enter hash password codebelow
+        $r=Admin::find(1);
+           $r->password=Hash::make('444');
+           $r->save();
+       
+        //  prx($result);
         if($result)
         {
             if(Hash::check($request->post('password'),$result->password))
@@ -109,50 +97,9 @@ class AdminController extends Controller
     
 
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Admin  $admin
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Admin $admin)
-    {
-        //
-    }
+  
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Admin  $admin
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Admin $admin)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Admin  $admin
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Admin $admin)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Admin  $admin
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Admin $admin)
-    {
-        //
-    }
+   
 }
 
 

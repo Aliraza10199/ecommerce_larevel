@@ -1,0 +1,194 @@
+@charset "UTF-8";
+/*----------------------------------------
+
+	Theme Name: Goodwin HTML5 eCommerce Template
+	Author: BigSteps
+	Author URI: http://themeforest.net/user/bigsteps
+	Version: 1.0.0
+
+-----------------------------------------*/
+/*----------------------------------------
+
+[Table of contents]
+
+1. Main Structure
+2. Typography
+    2.1. Basic elements
+    2.2. Buttons
+    2.3. Form elements
+    2.4. Subscribe Form
+    2.5. Tags
+    2.6. Tooltip
+    2.7. Breadcrumbs
+    2.8. Tabs
+    2.9. Slick Slider Custom
+3. Menu
+    3.1. Megamenu
+    3.2. Mobile Menu
+4. Header
+    4.1. Promo Topline
+    4.2. Header Structure
+5. Footer
+6. Main Slider
+7. Banners
+8. Product and Category Page
+8.1. Product Card
+8.2. Product Single Slider
+8.3. Product Banner
+8.4. Product Page
+8.5. Category Page
+8.6. Product Swatches
+8.7. Product Prices
+8.8. CountDown
+9. Collections
+10. Cart Table Page
+11. Modals
+12. Brand Block
+    12.1. Brand Grid/Carousel
+    12.2. Brand Product
+13. Shop Features Blocks
+14. Card image & text
+15. Big Single Slider (with price table)
+16. Testimonials
+17. Instagram
+18. Blog Pages
+19. About page
+    19.1 Timeline
+    19.2  Person card
+20. Gallery page
+21. FAQ
+22. Browsers fix
+
+
+---------------------------------------*/
+
+/*  1. Main Structure  */
+@import "components/_loader.scss";
+@import "components/_structure.scss";
+
+/*  2. Typography  */
+    /*  2.1. Basic elements  */
+    @import "components/_typography.scss";
+    /*  2.2. Buttons  */
+    @import "components/_buttons.scss";
+    /*  2.3. Form elements  */
+    @import "components/_form.scss";
+    /*  2.4. Subscribe Form  */
+    @import "components/_subscribe-form.scss";
+    /*  2.5. Tags  */
+    @import "components/_tags.scss";
+    /*  2.6. Tooltip  */
+    @import "components/_tooltip.scss";
+    /*  2.7. Breadcrumbs  */
+    @import "components/_breadcrumbs.scss";
+    /*  2.8. Tabs  */
+    @import "components/_tabs.scss";
+    @import "components/_category-tab-content.scss";
+    /*  2.9. Slick Slider Custom */
+    @import "components/_slick.scss";
+
+/*  3. Menu  */
+    /*  3.1. Megamenu  */
+    @import "components/_megamenu.scss";
+    /*  3.2. Mobile Menu  */
+    @import "components/_mobilemenu";
+    @import "components/_mobilemenu-push.scss";
+
+/*  4. Header  */
+    /*  4.1. Promo Topline  */
+    @import "components/_promo-topline.scss";
+    /*  4.2. Header Structure  */
+    @import "components/_header.scss";
+    @import "components/_header2.scss";
+    @import "components/_header3.scss";
+    @import "components/_header4.scss";
+    @import "components/_header5.scss";
+    @import "components/_header6.scss";
+    @import "components/_header7.scss";
+    @import "components/_header8.scss";
+    @import "components/_header11.scss";
+
+/*  5. Footer  */
+@import "components/_footer.scss";
+
+/* 6. Main Slider  */
+@import "components/_bnslider.scss";
+
+/* 7. Banners  */
+@import "components/_banners.scss";
+@import "components/_comingsoon-banner.scss";
+
+/*  8. Product and Category Page  */
+    /*  8.1. Product Card  */
+    @import "components/_product.scss";
+    /*  8.2. Product Single Slider  */
+    @import "components/_product-slider-single.scss";
+    /*  8.3. Product Banner  */
+    @import "components/_product-banner.scss";
+    /*  8.4. Product Page  */
+    @import "components/_product-page.scss";
+    /*  8.5. Category Page  */
+    @import "components/_category-filter.scss";
+    /*  8.6. Product Swatches  */
+    @import "components/_color-swatch.scss";
+    @import "components/_size-swatch.scss";
+    @import "components/_colors.scss";
+    /*  8.7. Product Prices  */
+    @import "components/_prices.scss";
+    /*  8.8. CountDown  */
+    @import "components/_countdown.scss";
+    /*  8.9. Compare  */
+    @import "components/_compare-page.scss";
+
+/*  9. Collections  */
+@import "components/_collections-carousel.scss";
+@import "components/_collections.scss";
+@import "components/_categories.scss";
+@import "components/_categories.scss";
+
+/*  10. Cart Table Page */
+@import "components/_cart-table.scss";
+
+/*  11. Modals  */
+@import "components/_modal.scss";
+
+/*  12. Brand Block */
+    /*  12.1. Brand Grid/Carousel  */
+    @import "components/_brand-carousel.scss";
+    /*  12.2. Brand Product  */
+    @import "components/_brand-product.scss";
+    @import "components/_inside-carousel.scss";
+
+/*  13. Shop Features Blocks  */
+@import "components/_shop-features.scss";
+
+/*  14. Card image & text  */
+@import "components/_card-imgtext.scss";
+
+/*  15. Big Single Slider (with price table)  */
+@import "components/_big-carousel.scss";
+
+/*  16. Testimonials  */
+@import "components/_testimonials.scss";
+
+/*  17. Instagram  */
+@import "components/_instagram.scss";
+
+/*  18. Blog Pages  */
+@import "components/_post.scss";
+@import "components/_reviews.scss";
+
+/*  19. About page
+    /*  19.1 Timeline  */
+    @import "components/_timeline.scss";
+    /*  19.2  Person card  */
+    @import "components/_person.scss";
+
+/*  20. Gallery page  */
+@import "components/_gallery.scss";
+
+/*  21. FAQ  */
+@import "components/_faq.scss";
+
+/*  22. Browsers fix  */
+@import "components/_cross-browser.scss";

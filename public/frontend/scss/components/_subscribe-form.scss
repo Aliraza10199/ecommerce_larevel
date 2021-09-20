@@ -1,0 +1,160 @@
+.subscribe-form--style1 {
+  .subscribe-form-title {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 600;
+    font-family: $heading_font_family;
+    padding: 14px 0 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $subscribe-form-style1-title_color;
+  }
+  .form-inline {
+    @include justify-content(center);
+    text-align: center;
+  }
+  .form-inline > * {
+    margin-left: 15px;
+    display: inline-block;
+  }
+  .form-inline > *:first-child {
+    margin-left: 0;
+  }
+  input[type='text'], input[type='email'] {
+    width: 400px;
+    font-family: $heading_font_family;
+  }
+  button.btn-decor {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .btn-decor, .btn-decor:focus {
+    color: $subscribe-form-style1-button_color;
+  }
+}
+
+.form-control-wrap .errors {
+  position: absolute;
+}
+
+@media screen and (max-width: $screen-md-max) {
+  .subscribe-form--style1 {
+    .subscribe-form-title {
+      display: block;
+      padding: 0;
+    }
+    .form-inline {
+      @include flex-direction(column);
+    }
+    .form-inline > * {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+    .form-inline > *:first-child {
+      margin-top: 0;
+    }
+    .form-control-wrap {
+      display: block;
+      width: 370px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    input[type='text'], input[type='email'] {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    button.btn-decor {
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+    .form-control-wrap .errors {
+      position: relative;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-sm-max) {
+  .subscribe-form--style1 .form-control-wrap {
+    width: 270px;
+  }
+}
+
+.subscribe-form--style2 {
+  text-align: center;
+  & > * {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+  & > *:first-child {
+    margin-top: 0;
+  }
+  & > form:not(:first-child) {
+    margin-top: 40px;
+  }
+  input[type='text'], input[type='email'] {
+    max-width: 555px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .input-group {
+    max-width: 605px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.subscribe-form--style3 {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  & > * {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+  & > *:first-child {
+    margin-top: 0;
+  }
+  & > form:not(:first-child) {
+    margin-top: 40px;
+  }
+  .input-group {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn--input-group:before {
+    border-left: 0;
+  }
+  .input-group-btn:last-child > .btn.btn--input-group:not(:hover) {
+    background-color: transparent;
+    color: $text_color_dark;
+  }
+}
+
+.subscribe-form--whitecolor {
+  color: $subscribe-form-whitecolor-text_color;
+  .subscribe-form-title {
+    color: $subscribe-form-whitecolor-title_color;
+  }
+  .btn-decor, .btn-decor:focus {
+    color: $subscribe-form-whitecolor-button_color;
+    &:after {
+      background-color: $subscribe-form-whitecolor-button_color;
+    }
+  }
+}
+
+.subscribe-inline .errors {
+  position: absolute;
+  top: 100%;
+}
+
+body.mac .subscribe-form input.form-control {
+  padding-top: 16px;
+}

@@ -1,0 +1,28 @@
+/* price block rtl */
+
+.prd-price {
+  & > * {
+    float: right;
+    margin-right: 0;
+    margin-left: 7px;
+  }
+  & > *:last-child {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .price-comment {
+    margin-left: 10px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: $screen-md-max) {
+  .prd-grid:not(.listing-view) .prd:not(.prd-horizontal-simple) {
+    .prd-price {
+      .price-old {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+  }
+}

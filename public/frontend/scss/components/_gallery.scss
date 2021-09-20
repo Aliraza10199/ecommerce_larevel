@@ -1,0 +1,235 @@
+.filters {
+  margin: 0 0 35px;
+  padding: 0;
+  text-align: center;
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: 15px;
+  }
+  .filters-label {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  .filters-label > a {
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-family: $heading_font_family;
+    color: $heading_color;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .filters-label.active,
+  .filters-label:hover {
+    & > a {
+      color: $custom-color;
+    }
+  }
+  .filters-label-count {
+    color: $text_color_light;
+    padding-left: 10px;
+    font-weight: 400;
+  }
+}
+
+.holder.fullwidth .filters {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.gallery-wrapper {
+  overflow: hidden;
+  margin-bottom: -1px;
+}
+
+.gallery--style-1 .gallery-item {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  float: left;
+  width: 33.333%;
+  @media (max-width: $screen-md-max) {
+    width: 50%;
+  }
+  @media (max-width: $screen-sm-max) {
+    width: 100%;
+  }
+  p {
+    font-size: 14px;
+    line-height: 24px;
+    @media (max-width: $screen-sm-max) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  &:hover {
+    .gallery-item-caption,
+    .gallery-item-links {
+      opacity: 1;
+    }
+    .gallery-item-link {
+      opacity: 1;
+      margin: 0 15px;
+    }
+  }
+}
+
+.gallery--style-1 .gallery-item-image img {
+  display: block;
+  width: 100%;
+}
+
+.gallery--style-1 .gallery-item-image:not(.has-loader) img {
+  position: relative;
+}
+
+.gallery--style-1 .gallery-item-caption {
+  display: flex;
+  flex-direction: column;
+  @include align-items(center);
+  justify-content: flex-end;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 23px 25px;
+  background: rgba(0, 0, 0, .3);
+  opacity: 0;
+  @include transition (.5s);
+  &,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $gallery-style-1_text_color;
+    margin-bottom: 0;
+  }
+  & > *:not(:first-child) {
+    margin-top: 13px;
+  }
+}
+
+.gallery--style-1 .gallery-item-title {
+  font-size: 18px;
+  line-height: 1em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  @media (max-width: $screen-sm-max) {
+    font-size: 16px;
+  }
+}
+
+.gallery--style-2 .gallery-item {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  float: left;
+  width: calc(33.333% - 30px);
+  margin: 0 15px 10px;
+  @media (max-width: $screen-md-max) {
+    width: calc(50% - 30px);
+  }
+  @media (max-width: $screen-sm-max) {
+    width: 100%;
+    margin: 0;
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 24px;
+    @media (max-width: $screen-sm-max) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  &:hover {
+    .gallery-item-links {
+      opacity: 1;
+    }
+    .gallery-item-link {
+      opacity: 1;
+      margin: 0 15px;
+    }
+  }
+}
+
+.gallery--style-2 .gallery-item-image {
+  position: relative;
+  img {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+}
+
+.gallery--style-2 .gallery-item-caption {
+  padding: 30px 0;
+  @media (max-width: $screen-xs-max) {
+    padding: 20px 0;
+  }
+  &,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $gallery-style-2_text_color;
+    margin-bottom: 0;
+  }
+  & > *:not(:first-child) {
+    margin-top: 13px;
+  }
+}
+
+.gallery--style-2 .gallery-item-title {
+  font-size: 18px;
+  line-height: 1em;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.gallery--style-2 .gallery-item-category {
+  font-size: 12px;
+  line-height: 18px;
+  color: $text_color_light;
+  text-transform: uppercase;
+}
+
+.gallery-item-links {
+  display: flex;
+  @include align-items(center);
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  @include transition (.5s);
+}
+
+.gallery-item-link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  margin: 0 75px;
+  background: $gallery-item-link_bg;
+  font-size: 17px;
+  line-height: 45px;
+  color: $gallery-item-link_color;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0;
+  @include transition (.5s);
+  &:hover,
+  &:focus {
+    color: $gallery-item-link_color;
+    text-decoration: none;
+  }
+  &:hover {
+    background: $gallery-item-link-hover_bg;
+    @include transition (.5s);
+  }
+}

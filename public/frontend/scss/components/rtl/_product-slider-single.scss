@@ -1,0 +1,36 @@
+/* single product slider rtl */
+
+.product-slider {
+  &.vert-dots.vert-dots--left .slick-dots {
+    right: 5.35%;
+    left: auto;
+  }
+  .product-slider-item {
+    img {
+      float: left;
+    }
+  }
+}
+
+.product-slider-2 {
+  .product-slider-item {
+    img {
+      float: left;
+    }
+  }
+  .prd-tag {
+    & + * {
+      margin-right: 10px;
+      margin-left: 0;
+    }
+  }
+  .prd-action form {
+    @media screen and (min-width: $screen-md-min) {
+      .select-wrapper select {
+        padding: 8px 16px 8px 26px;
+        border-right-width: 1px;
+        border-left: 0;
+      }
+    }
+  }
+}

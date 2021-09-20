@@ -1,0 +1,36 @@
+/* subscribe form rtl */
+
+.subscribe-form--style1 {
+  .form-inline > * {
+    margin-right: 15px;
+    margin-left: 0;
+  }
+  .form-inline > *:first-child {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.form-control-wrap .errors {
+  position: absolute;
+}
+
+@media screen and (max-width: $screen-md-max) {
+  .subscribe-form--style1 {
+    .form-inline > * {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .form-control-wrap {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.subscribe-form--style3 {
+  .btn--input-group:before {
+    border-left-width: 1px;
+    border-right: 0;
+  }
+}

@@ -1,0 +1,165 @@
+body:not(.no-loader) > *:not(.body-preloader) {
+  opacity: 0;
+}
+
+.gdw-loader, .ezp-spinner {
+  @include transition(.5s);
+  animation: loader-rotate .8s infinite linear;
+  background: none !important;
+  border: 3px solid $loader-spinner_border_color;
+  border-radius: 100%;
+  border-top-color: $loader-spinner_spin_color;
+  content: "";
+  height: 34px !important;
+  left: 50%;
+  line-height: 1;
+  margin-left: -17px;
+  margin-top: -17px;
+  pointer-events: none;
+  position: absolute;
+  top: 50% !important;
+  -webkit-animation: loader-rotate .8s infinite linear;
+  width: 34px !important;
+  z-index: 154 !important;
+}
+
+@-moz-keyframes loader-rotate {
+  from {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes loader-rotate {
+  from {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@keyframes loader-rotate {
+  from {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+.prd-grid-wrap {
+  position: relative;
+  .loader-wrap {
+    @include fullAbsolute();
+    @include transition(.5s);
+    background: $ajax-loader_bg;
+    min-height: 500px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 3;
+    .dots {
+      left: 50%;
+      padding: 0;
+      position: fixed;
+      top: 50vh;
+      transform: translateX(-50%);
+    }
+  }
+  &.is-loading .loader-wrap {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.body-preloader {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $body_bg;
+  opacity: 1;
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(center);
+  @include transition(.5s);
+}
+
+body.no-loader {
+  .body-preloader {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .bnslider-loader {
+    display: none;
+  }
+}
+
+.loader-wrap {
+  margin: auto;
+  pointer-events: none;
+  text-align: center;
+  .dot {
+    animation-direction: alternate;
+    animation-duration: 0.35s;
+    animation-iteration-count: infinite;
+    animation-name: wave;
+    animation-timing-function: cubic-bezier(0.64, 0.12, 0.79, 0.35);
+    background-color: $loader-dot-1_bg;
+    border: 0;
+    border-radius: 50%;
+    display: inline-block;
+    height: 17px;
+    margin: 0 5px;
+    pointer-events: none;
+    width: 17px;
+  }
+}
+
+@-moz-keyframes wave {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(15px);
+  }
+}
+
+@-webkit-keyframes wave {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(15px);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(15px);
+  }
+}
+
+.dot.two {
+  animation-delay: 0.25s;
+  background-color: $loader-dot-2_bg;
+}
+
+.dot.three {
+  animation-delay: 0.4s;
+  background-color: $loader-dot-3_bg;
+}

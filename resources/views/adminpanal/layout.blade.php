@@ -64,6 +64,10 @@
                             <a  href="{{url('admin/dashboard')}}">
                             <i class="fas fa-tachometer-alt"></i>Dashboard</a>          
                     </li>
+                    <li class="@yield('order_select')">
+                            <a  href="{{url('admin/order')}}">
+                            <i class="fas fa-tachometer-alt"></i>Order</a>          
+                    </li>
                 
                         <li class="@yield('category_select')">
                             <a  href="{{url('admin/category')}}">
@@ -99,6 +103,14 @@
                         <a  href="{{url('admin/customer')}}">
                             <i class="fas fa-user"></i>Customer</a>
                     </li>
+                    <li class="@yield('tax_select')" >
+                        <a  href="{{url('admin/tax')}}">
+                            <i class="fas fa-user"></i>Tax</a>
+                    </li>
+                    <li class="@yield('home_banner_select')" >
+                        <a  href="{{url('admin/home_banner')}}">
+                            <i class="fas fa-images"></i>Home Banner</a>
+                    </li>
                           
                        
                     </ul>
@@ -121,6 +133,10 @@
                         <li class="@yield('dashboard_select')">
                             <a  href="{{url('admin/dashboard')}}">
                             <i class="fas fa-tachometer-alt"></i>Dashboard</a>          
+                    </li>
+                        <li class="@yield('order_select')">
+                            <a  href="{{url('admin/order')}}">
+                            <i class="fas fa-tachometer-alt"></i>Order</a>          
                     </li>
                 
                         <li class="@yield('category_select')">
@@ -156,6 +172,14 @@
                     <li class="@yield('customer_select')" >
                         <a  href="{{url('admin/customer')}}">
                             <i class="fas fa-user"></i>Customer</a>
+                    </li>
+                    <li class="@yield('tax_select')" >
+                        <a  href="{{url('admin/tax')}}">
+                            <i class="fas fa-user"></i>Tax</a>
+                    </li>
+                    <li class="@yield('home_banner_select')" >
+                        <a  href="{{url('admin/home_banner')}}">
+                            <i class="fas fa-images"></i>Home Banner</a>
                     </li>
 
                         
@@ -260,6 +284,7 @@
 
     <!-- Main JS-->
     <script src="{{asset('adminpanals//js/main.js')}}"></script>
+    <script src="{{asset('adminpanals//js/mains.js')}}"></script>
 
 </body>
 

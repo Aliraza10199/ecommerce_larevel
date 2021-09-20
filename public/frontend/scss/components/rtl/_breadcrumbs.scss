@@ -1,0 +1,22 @@
+/* breadcrumbs rtl */
+
+.breadcrumbs {
+  li {
+    &:first-child {
+      padding-left: 5px;
+      padding-right: 0;
+    }
+    &:last-child {
+      padding-right: 5px;
+      padding-left: 0;
+    }
+    &:after {
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 8px;
+      padding-right: 0;
+      transform: scale(-1);
+      display: inline-block;
+    }
+  }
+}

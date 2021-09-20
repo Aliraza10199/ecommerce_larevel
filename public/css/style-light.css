@@ -63,7 +63,9 @@
 /*  1. Main Structure  */
 body:not(.no-loader) > *:not(.body-preloader) {
   opacity: 0; }
-
+.orderdetail{
+  width: 35%;
+}
 .gdw-loader, .ezp-spinner {
   transition: 0.5s;
   animation: loader-rotate .8s infinite linear;

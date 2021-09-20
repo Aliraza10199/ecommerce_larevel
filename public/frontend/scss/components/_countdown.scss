@@ -1,0 +1,202 @@
+.countdown-box {
+  position: relative;
+  text-align: center;
+  @include transition (opacity 0.3s ease 0s, visibility 0.3s linear 0s);
+  @media screen and (max-width: $screen-sm-max) {
+    max-width: 100%;
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background: $countdown-box_bg;
+    content: ' ';
+    opacity: 0.7;
+  }
+  .countdown {
+    @include flexbox();
+    @include justify-content(center);
+    padding: 13px 5px;
+    &:empty {
+      display: none;
+    }
+  }
+  .countdown > span {
+    position: relative;
+    display: inline-block;
+    margin: 0 4px;
+    padding: 0;
+    color: $countdown-box_text_color;
+    vertical-align: middle;
+    font-size: 13px;
+    line-height: 1.538em;
+    span {
+      padding: 0 2px;
+      font-family: monospace;
+      font-size: 14px;
+    }
+  }
+  .countdown > span:after {
+    position: absolute;
+    top: 0;
+    right: -6.5px;
+    display: block;
+    margin-top: -2px;
+    content: ":";
+  }
+  .countdown > span:last-child:after {
+    display: none;
+  }
+}
+
+.prd .countdown-box {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.countdown-box-cooming {
+  position: relative;
+  display: inline-block;
+  width: 262px;
+  height: 50px;
+  padding: 13px 5px;
+  text-align: center;
+  background: $countdown-box-cooming_bg;
+  .countdown > span {
+    position: relative;
+    display: inline-block;
+    margin: 0 7px;
+    padding: 0;
+    color: $countdown-box-cooming_text_color;
+    vertical-align: middle;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: bold;
+  }
+  .countdown > span:after {
+    position: absolute;
+    top: 0;
+    right: -9px;
+    display: block;
+    margin-top: -1px;
+    content: ":";
+  }
+  .countdown > span:last-child:after {
+    display: none;
+  }
+}
+
+.countdown-box-full {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 13px 5px;
+  text-align: center;
+  background: $countdown-box-full_bg;
+  & + * {
+    margin-top: 50px;
+  }
+  .countdown > span {
+    position: relative;
+    display: inline-block;
+    margin: 0 7px;
+    padding: 0;
+    color: $countdown-box-full_text_color;
+    vertical-align: middle;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: bold;
+  }
+  .countdown > span:after {
+    position: absolute;
+    top: 0;
+    right: -9px;
+    display: block;
+    margin-top: -1px;
+    content: ":";
+  }
+  .countdown > span:last-child:after {
+    display: none;
+  }
+}
+
+.prd-w-md .countdown-box {
+  .countdown {
+    padding: 10px 5px;
+  }
+  .countdown > span {
+    font-size: 11px;
+    margin: 0 3px;
+    span {
+      font-size: 12px;
+    }
+    &:after {
+      right: -5.5px;
+      margin-top: -1px;
+    }
+  }
+}
+
+.prd-w-md.prd-has-countdown .prd-img-area .color-swatch {
+  bottom: 40px;
+}
+
+.prd-w-sm .countdown-box {
+  .countdown {
+    padding: 6px 0;
+  }
+  .countdown > span {
+    margin: 0 3px;
+    font-size: 11px;
+    span {
+      font-size: 12px;
+    }
+    &:last-child {
+      display: none;
+    }
+    &:nth-child(3):after {
+      display: none;
+    }
+    &:after {
+      right: -5.0px;
+      top: 1px;
+    }
+  }
+}
+
+.prd-w-sm.prd-has-countdown .prd-img-area .color-swatch {
+  bottom: 32px;
+}
+
+.prd-w-xs .countdown-box {
+  .countdown {
+    padding: 5px 0;
+  }
+  .countdown > span {
+    margin: 0 3px;
+    font-size: 10px;
+    span {
+      font-size: 11px;
+    }
+    &:last-child {
+      display: none;
+    }
+    &:nth-child(3):after {
+      display: none;
+    }
+    &:after {
+      right: -5px;
+      top: 1px;
+    }
+  }
+}
+
+.prd-w-xs.prd-has-countdown .prd-img-area .color-swatch {
+  bottom: 29px;
+}

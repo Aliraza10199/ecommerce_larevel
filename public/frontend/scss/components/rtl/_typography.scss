@@ -1,0 +1,120 @@
+/* typography rtl */
+
+h4 [class*="icon-"], .h4-style [class*="icon-"] {
+  padding-right: 0;
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.social-list {
+  li {
+    margin-left: 0;
+    margin-right: -4px;
+  }
+}
+
+.social-list--circle {
+  li {
+    margin: 0 0 7px 3px;
+  }
+}
+
+.list--marker-squared {
+  li {
+    padding-left: 0;
+    padding-right: 14px;
+  }
+  li:before {
+    left: auto;
+    right: 0;
+  }
+}
+
+.list--marker-arrow {
+  li {
+    padding-left: 0;
+    padding-right: 14px;
+  }
+  li:before {
+    left: auto;
+    right: 0;
+  }
+}
+
+blockquote {
+  border-width: 0 4px 0 0;
+}
+
+.pagination > li {
+  display: inline-flex;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  margin: 2px 0 2px 4px;
+  @media screen and (max-width: $screen-sm-max) {
+    margin-left: 3px;
+    margin-right: 0;
+  }
+}
+
+.contact-info {
+  &-text {
+    margin-right: 15px;
+    margin-left: 0;
+  }
+}
+
+.text-left-not-xs, .text-left-not-sm, .text-left-not-md, .text-left-not-lg {
+  text-align: right;
+}
+
+.text-right-not-xs, .text-right-not-sm, .text-right-not-md, .text-right-not-lg {
+  text-align: left;
+}
+
+@media (max-width: $screen-xs-max) {
+  .text-left-xs {
+    text-align: right;
+  }
+  .text-right-xs {
+    text-align: left;
+  }
+}
+
+@media (max-width: $screen-sm-max) {
+  .text-left-sm {
+    text-align: right;
+  }
+  .text-right-sm {
+    text-align: left;
+  }
+}
+
+@media (max-width: $screen-md-max) {
+  .text-left-md {
+    text-align: right;
+  }
+  .text-right-md {
+    text-align: left;
+  }
+}
+
+ul.two-column li {
+  min-width: 50%;
+}
+
+.link-icn {
+  [class*='icon'] {
+    padding-right: 5px;
+    padding-left: 0;
+  }
+}
+
+.table-order-history {
+  td {
+    &:last-child {
+      text-align: left;
+    }
+  }
+}

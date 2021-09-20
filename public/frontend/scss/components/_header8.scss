@@ -1,0 +1,48 @@
+/* header 08 */
+@media screen and (min-width: $mobile-menu-breikpoint) {
+  .hdr-style-8 {
+    .links-holder {
+      @include flexbox();
+    }
+    .hdr-content-right {
+      @include flexbox();
+      @include align-items(center);
+      & > *:not(:last-child) {
+        position: relative;
+        padding-right: 45px;
+      }
+      & > *:not(:last-child):after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        top: -2px;
+        width: 1px;
+        height: 20px;
+        margin: 0;
+        background-color: $header_border_color;
+      }
+    }
+    .hdr-bottom {
+      border-top-width: 1px;
+      border-top-style: solid;
+      border-top-color: $header_border_color;
+      position: relative;
+    }
+    .hdr-nav {
+      min-height: 60px;
+      .mmenu:not(.mmenu--vertical) {
+        margin-left: 0;
+      }
+    }
+    .nav-holder {
+      margin: 0;
+    }
+    .dropdn_search .dropdn-content {
+      margin-top: -1px;
+      border-top-width: 1px;
+      border-top-style: solid;
+      border-top-color: $header_border_color;
+    }
+  }
+}

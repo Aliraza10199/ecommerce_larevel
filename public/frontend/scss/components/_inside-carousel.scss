@@ -1,0 +1,90 @@
+.carousel-inside {
+  position: relative;
+  overflow: hidden;
+  .carousel-control {
+    position: absolute;
+    display: block;
+    height: 47px;
+    width: 47px;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    background: rgba($inside_car-arrow-bg, .7);
+    color: $inside_car-arrow-color;
+    top: 50%;
+    padding: 0;
+    margin-top: 47px;
+    border: 0;
+    outline: none;
+    opacity: 1;
+    @include transition (0.2s);
+    text-shadow: none;
+    text-align: center;
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      background: rgba($inside-car-arrow-hover-bg, 1);
+    }
+  }
+  .carousel-control:before {
+    font-family: 'icomoon';
+    font-size: 25px;
+    line-height: 47px;
+    color: $inside_car-arrow-color;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .carousel-control.prev {
+    margin-top: -47px;
+    left: auto;
+    right: 0;
+    &:before {
+      content: '\e919';
+    }
+  }
+  .carousel-control.next {
+    margin-top: 0;
+    left: auto;
+    right: 0;
+    &:before {
+      content: '\e922';
+      margin-left: 2px;
+    }
+  }
+}
+
+.carousel-inner > .carousel-item {
+  @include transition ($slideSpeed ease-in-out);
+}
+
+@media screen and (max-width: $screen-sm-max) {
+  .carousel-inside {
+    .carousel-control {
+      height: 44px;
+      width: 44px;
+      background: rgba($inside_car-arrow-bg, .7);
+    }
+    .carousel-control:before {
+      font-size: 24px;
+      line-height: 44px;
+    }
+    .carousel-control.prev {
+      margin-top: -22px;
+      left: 10px;
+      right: auto;
+      &:before {
+        content: '\e40a';
+      }
+    }
+    .carousel-control.next {
+      margin-top: -22px;
+      left: auto;
+      right: 10px;
+      &:before {
+        content: '\e409';
+      }
+    }
+  }
+}

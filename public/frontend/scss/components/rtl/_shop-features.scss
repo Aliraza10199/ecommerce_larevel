@@ -1,0 +1,76 @@
+/* shop features rtl */
+
+.shop-features-style1 {
+  .shop-feature {
+    padding: 22px 0 22px 20px;
+  }
+}
+
+.shop-features-style3, .shop-features-style3-1 {
+  .shop-feature {
+    .shop-feature-icon {
+      margin-left: 20px;
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-sm-max) {
+  footer .shop-features-style3 .shop-feature .shop-feature-icon {
+    margin-right: 0;
+    margin-left: 20px;
+  }
+}
+
+.shop-features-style3-1, body[class*='home-page-toys-2'] .shop-features-style3 {
+  & > *:first-child .shop-feature-bg, & > *:last-child .shop-feature-bg {
+    right: -200%;
+    left: auto;
+  }
+  & > *:last-child .shop-feature-bg {
+    left: -200%;
+    right: auto;
+  }
+}
+
+.shop-features-style4 {
+  @media screen and (min-width: $screen-md-min) {
+    .shop-feature {
+      border-left-width: 0;
+      border-right-width: 1px;
+      border-right-style: solid;
+    }
+  }
+  @media screen and (max-width: $screen-lg-max) and (min-width: $screen-md-min) {
+    .shop-feature {
+      padding: 0 0 0 15px;
+    }
+  }
+  @media screen and (max-width: $screen-sm-max) {
+    .shop-feature .shop-feature-icon {
+      text-align: right;
+    }
+  }
+}
+
+.shop-features-modal {
+  @media screen and (max-width: $screen-sm-max) {
+    margin-right: -105px;
+    margin-left: 0;
+  }
+}
+
+.shop-features-modal .shop-feature .shop-feature-icon {
+  margin: 0 0 0 18px;
+}
+
+.shop-features-style2 {
+  @media screen and (max-width: $screen-xs-max) {
+    .shop-feature {
+      text-align: right;
+      .shop-feature-icon {
+        text-align: right;
+      }
+    }
+  }
+}

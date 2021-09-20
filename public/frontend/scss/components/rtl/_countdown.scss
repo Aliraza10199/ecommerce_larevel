@@ -1,0 +1,49 @@
+/* countdown rtl */
+
+.countdown-box {
+  .countdown > span:after {
+    left: -6.5px;
+    right: auto;
+  }
+}
+
+.countdown-box-cooming {
+  .countdown > span:after {
+    right: auto;
+    left: -9px;
+  }
+}
+
+.countdown-box-full {
+  .countdown > span:after {
+    right: auto;
+    left: -9px;
+  }
+}
+
+.prd-w-md .countdown-box {
+  .countdown > span {
+    &:after {
+      left: -5.5px;
+      right: auto;
+    }
+  }
+}
+
+.prd-w-sm .countdown-box {
+  .countdown > span {
+    &:after {
+      left: -5px;
+      right: auto;
+    }
+  }
+}
+
+.prd-w-xs .countdown-box {
+  .countdown > span {
+    &:after {
+      left: -5px;
+      right: auto;
+    }
+  }
+}

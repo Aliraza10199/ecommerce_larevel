@@ -1,0 +1,82 @@
+.compare-table {
+  width: auto;
+  overflow-x: auto;
+  position: relative;
+  padding-bottom: 10px;
+  .prd-horizontal-simple {
+    margin-bottom: 10px;
+    .prd-inside {
+      @include flex-direction(column);
+      &:hover {
+        @include box-shadow(none);
+      }
+    }
+    .prd-info {
+      padding: 0;
+      margin-top: 10px;
+    }
+    .prd-action {
+      position: static;
+    }
+    .prd-action .btn {
+      width: auto !important;
+    }
+  }
+}
+
+.compare-table-head-row, .compare-table-row {
+  display: flex;
+  position: relative;
+  &:not(:last-child) > * {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: $decor_border_color_darker;
+  }
+}
+
+.compare-table-row {
+  &:hover > * {
+    background-color: #f9f9f9;
+  }
+}
+
+.compare-table-cell {
+  position: relative;
+  z-index: 0;
+  padding: 10px 10px;
+  min-width: 250px;
+  width: 250px;
+  @media (max-width: $screen-sm-max) {
+    width: 180px;
+    min-width: 180px;
+  }
+}
+
+.compare-table-cell-first {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  min-width: 250px;
+  width: 250px;
+  padding: 10px 10px;
+  font-weight: 700;
+  color: $text_color_dark;
+  font-weight: 800;
+  background-color: #ffffff;
+  @media (max-width: $screen-sm-max) {
+    width: 150px;
+    min-width: 150px;
+  }
+}
+
+.delete-from-compare {
+  font-size: 24px;
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  bottom: 5px;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,42 @@
+/* demo layout select rtl */
+
+@media screen and (min-width: $screen-lg-min) {
+  .layout-select {
+    left: 0;
+  }
+}
+
+.homepage-select {
+  &-toggle {
+    .icon-angle-down {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+  }
+  &-text {
+    padding-left: 0;
+    padding-right: 15px;
+  }
+  &-active-label {
+    left: auto;
+    right: 0;
+  }
+  &-close {
+    right: auto;
+    left: 2px;
+  }
+  &-minimize {
+    left: 46px;
+    right: auto;
+  }
+  &-buy {
+    right: auto;
+    left: 104px;
+  }
+  &.closed {
+    &:not(.half-closed) .homepage-select-buy {
+      right: auto;
+      left: 54px;
+    }
+  }
+}

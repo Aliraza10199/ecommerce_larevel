@@ -40,6 +40,13 @@ class BrandController extends Controller
  
               $result['name']=$arr['0']->name;
               $result['image']=$arr['0']->image;
+
+              $result['is_home']=$arr['0']->is_home;
+              $result['is_home_selected']="";
+              if($arr['0']->is_home==1)
+              {
+                  $result['is_home_selected']="checked";
+              }
               $result['status']=$arr['0']->status;
               //varible for ID 
               $result['id']=$arr['0']->id;
@@ -50,6 +57,9 @@ class BrandController extends Controller
             
             $result['name']='';
             $result['image']='';
+            $result['is_home_selected']="";
+
+            $result['is_home']='';
             $result['status']='';
               $result['id']=0;
   
@@ -102,7 +112,11 @@ class BrandController extends Controller
             $model->image=$image_name;
         }
  
- 
+        //    by defalt value is 0
+        $model->is_home=0;
+        if($request->post('is_home')!=null){
+            $model->is_home=1;
+        }
    
         $model->name=$request->post('name');
         $model->status=1;
@@ -140,74 +154,6 @@ class BrandController extends Controller
          return redirect('admin/brand');
      }
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-     /**
-      * Store a newly created resource in storage.
-      *
-      * @param  \Illuminate\Http\Request  $request
-      * @return \Illuminate\Http\Response
-      */
-     public function store(Request $request)
-     {
-         //
-     }
- 
-     /**
-      * Display the specified resource.
-      *
-      * @param  \App\Models\category  $category
-      * @return \Illuminate\Http\Response
-      */
-     public function show(category $category)
-     {
-         //
-     }
- 
-     /**
-      * Show the form for editing the specified resource.
-      *
-      * @param  \App\Models\category  $category
-      * @return \Illuminate\Http\Response
-      */
-     public function edit(category $category)
-     {
-         //
-     }
- 
-     /**
-      * Update the specified resource in storage.
-      *
-      * @param  \Illuminate\Http\Request  $request
-      * @param  \App\Models\category  $category
-      * @return \Illuminate\Http\Response
-      */
-     public function update(Request $request, category $category)
-     {
-         //
-     }
- 
-     /**
-      * Remove the specified resource from storage.
-      *
-      * @param  \App\Models\category  $category
-      * @return \Illuminate\Http\Response
-      */
-     public function destroy(category $category)
-     {
-         //
-     }
  
  
 }

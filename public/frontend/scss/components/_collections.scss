@@ -1,0 +1,212 @@
+.collections-wrap {
+  margin-top: -45px;
+  @media screen and (max-width: $screen-sm-max) {
+    margin-top: -30px;
+  }
+  @media screen and (max-width: $screen-xs-max) {
+    margin-top: -20px;
+  }
+}
+
+.collection-item {
+  display: block;
+  margin-top: 45px;
+  color: $collection-item_color;
+  @media screen and (max-width: $screen-sm-max) {
+    margin-top: 30px;
+  }
+  @media screen and (max-width: $screen-xs-max) {
+    margin-top: 20px;
+  }
+  text-align: center;
+  text-decoration: none;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1.0, 1.0);
+  & > * + * {
+    margin-top: 15px;
+    @media screen and (max-width: $screen-xs-max) {
+      margin-top: 10px;
+    }
+  }
+  img {
+    width: 100%;
+  }
+  &.zoom-out {
+    img {
+      @include transform(scale(1.1) rotate(.01deg));
+      @include transition (.5s);
+    }
+  }
+  p {
+    font-size: 11px;
+    line-height: 18px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    &:not(:first-child) {
+      margin-top: 10px;
+      @media screen and (max-width: $screen-xs-max) {
+        margin-top: 5px;
+      }
+    }
+  }
+  &.zoom-out:hover {
+    img {
+      @include transform(scale(1) rotate(.01deg));
+    }
+  }
+  &:hover .collection-item-hover {
+    opacity: 1;
+    pointer-events: auto;
+    .btn-decor {
+      opacity: 1;
+      bottom: 0;
+    }
+  }
+  &:hover .collection-item-hover--empty {
+    pointer-events: none;
+  }
+}
+
+.collection-item-title {
+  margin-bottom: 0;
+  text-decoration: none;
+  color: $collection-item-title_color;
+}
+
+.collection-item-img {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  & > a {
+    display: block;
+    text-decoration: none;
+  }
+}
+
+.collection-item-hover {
+  @include fullAbsolute();
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(center);
+  @include transition(.4s);
+  z-index: 1;
+  opacity: 0;
+  padding: 15px;
+  text-transform: uppercase;
+  pointer-events: none;
+  .btn, .btn:focus,
+  .btn-decor, .btn-decor:focus,
+  a, a:focus {
+    color: $collection-item-hover-link_color;
+  }
+  & > span {
+    @include flexbox();
+    @include justify-content(center);
+    width: 100%;
+    flex-wrap: wrap;
+    font-size: 14px;
+    line-height: 24px;
+    color: $collection-item-hover-link_color;
+    text-transform: uppercase;
+    text-align: left;
+    @media screen and (max-width: $screen-lg-max) {
+      font-size: 12px;
+      line-height: 20px;
+    }
+    span {
+      display: block;
+      @include flexWidth(100%);
+    }
+  }
+  .btn-decor {
+    margin: 15px;
+    bottom: -50px;
+    opacity: 0;
+    color: $collection-item-hover-button_color;
+    @include transition(.4s);
+    @media screen and (max-width: $screen-sm-max) {
+      margin: 5px 10px;
+    }
+  }
+  .btn-decor + .btn-decor {
+    margin-left: 15px;
+  }
+  &:after {
+    content: '';
+    @include fullAbsolute();
+    background: #000;
+    opacity: .4;
+    z-index: -1;
+  }
+  @media screen and (max-width: $screen-sm-max) {
+    display: none;
+  }
+}
+
+collections-list .collection-item-hover {
+  & > span {
+    @include flexbox();
+    @include justify-content(flex-start);
+  }
+}
+
+.collection-box {
+  display: block;
+  overflow: hidden;
+  &:hover {
+    img {
+      @include transform(scale(1) rotate(.01deg));
+    }
+  }
+}
+
+.collection-box-image {
+  position: relative;
+  img {
+    width: 100%;
+    vertical-align: top;
+    @include transform(scale(1.1) rotate(.01deg));
+    @include transition (.5s);
+  }
+}
+
+.collection-box-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  & > * {
+    margin: 0;
+  }
+  & > *:not(:first-child) {
+    margin-top: 5px;
+  }
+}
+
+.collection-box-sub {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 24px;
+  font-family: $heading_font_family;
+  line-height: 1.5em;
+  color: $collection-box-subtitle_color;
+  @include respond-to(xs-only) {
+    font-size: 16px;
+    line-height: 1.2em;
+  }
+}
+
+.collection-box-title {
+  letter-spacing: 2.5px;
+  color: $collection-box-title_color;
+  @include respond-to(xs-only) {
+    font-size: 12px;
+    line-height: 1.2em;
+  }
+}

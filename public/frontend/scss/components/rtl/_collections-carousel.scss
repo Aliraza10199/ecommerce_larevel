@@ -1,0 +1,13 @@
+/* collection carousel rtl */
+
+.collection-carousel:not(.slick-initialized) {
+  .collection-carousel-item {
+    float: right;
+  }
+}
+
+.collection-carousel-2:not(.slick-initialized) {
+  .collection-carousel-2-item {
+    float: right;
+  }
+}

@@ -1,0 +1,13 @@
+/* collections rtl */
+
+.collection-item {
+  &-hover {
+    .btn-decor + .btn-decor {
+      margin-right: 15px;
+      margin-left: 0;
+    }
+    & > span {
+      text-align: right;
+    }
+  }
+}

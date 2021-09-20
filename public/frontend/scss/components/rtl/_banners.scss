@@ -1,0 +1,59 @@
+/* banners rtl */
+
+.bnr-wrap, .bnr-wrap * {
+  direction: ltr;
+}
+
+.bnr-wrap .bnr-text-wrap * {
+  direction: rtl;
+}
+
+.bnr.bnr--style-2 {
+  .bnr-caption {
+    padding: 5% 0 5% 5%;
+    float: left;
+    @include respond-to(sm-only) {
+      padding: 5% 5%;
+    }
+    @include respond-to(xs-only) {
+      padding: 10% 5%;
+    }
+  }
+}
+
+.bnr.bnr--style-3 .bnr-caption .bnr-text2 sup,
+.bnr.bnr--style-3-1 .bnr-caption .bnr-text2 sup {
+  display: inline-block;
+  padding-right: .1em;
+  padding-left: 0;
+}
+
+.bnr.bnr--style-3 .bnr-caption .bnr-text2 sub,
+.bnr.bnr--style-3-1 .bnr-caption .bnr-text2 sub {
+  transform: translateX(100%);
+  margin-left: -1.5em;
+  margin-right: 0;
+}
+
+.bnr-discount {
+  .bnr-text2-brd {
+    right: -55px;
+    left: auto;
+  }
+  &--left {
+    .bnr-discount-text-wrap {
+      text-align: left;
+    }
+  }
+  &--right {
+    .bnr-discount-text-wrap {
+      text-align: right;
+      left: 0;
+      right: auto;
+    }
+    .bnr-text2-brd {
+      right: auto;
+      left: -40px;
+    }
+  }
+}

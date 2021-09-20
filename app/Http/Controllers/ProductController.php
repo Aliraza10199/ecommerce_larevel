@@ -52,6 +52,15 @@ class ProductController extends Controller
               $result['technical_specification']=$arr['0']->technical_specification;
               $result['uses']=$arr['0']->uses;
               $result['waranty']=$arr['0']->waranty;
+          
+              $result['lead_time']=$arr['0']->lead_time;
+              $result['tax_id']=$arr['0']->tax_id;
+            //   $result['tax_type']=$arr['0']->tax_type;  
+              $result['is_promo']=$arr['0']->is_promo;
+              $result['is_featured']=$arr['0']->is_featured;
+              $result['is_discounted']=$arr['0']->is_discounted;
+              $result['is_tranding']=$arr['0']->is_tranding;
+
               $result['status']=$arr['0']->status;
               //varible for ID 
               $result['id']=$arr['0']->id;
@@ -97,6 +106,15 @@ class ProductController extends Controller
             $result['technical_specification']='';
             $result['uses']='';
             $result['waranty']='';
+       
+            $result['lead_time']='';
+            $result['tax_id']='';
+            // $result['tax_type']='';
+            $result['is_promo']='';
+            $result['is_featured']='';
+            $result['is_discounted']='';
+            $result['is_tranding']='';
+
             $result['status']='';
             $result['id']=0;
 
@@ -134,8 +152,10 @@ class ProductController extends Controller
          $result['sizes']=DB::table('sizes')->where(['status'=>1])->get(); 
          $result['colors']=DB::table('colors')->where(['status'=>1])->get(); 
          $result['brands']=DB::table('brands')->where(['status'=>1])->get(); 
+
+         $result['taxes']=DB::table('taxes')->where(['status'=>1])->get(); 
         //   echo '<pre>';
-        //   print_r($result['categorylist']);
+        //   print_r($result['taxes']);
         //   die();
   
           return view('adminpanal.manage_product',$result);
@@ -239,7 +259,16 @@ class ProductController extends Controller
         $model->technical_specification=$request->post('technical_specification');
         $model->uses=$request->post('uses');
         $model->waranty=$request->post('waranty');
-   
+     
+        $model->lead_time=$request->post('lead_time');
+        $model->tax_id=$request->post('tax_id');
+        // $model->tax_type=$request->post('tax_type');
+        $model->is_promo=$request->post('is_promo');
+        $model->is_featured=$request->post('is_featured');
+        $model->is_discounted=$request->post('is_discounted');
+        $model->is_tranding=$request->post('is_tranding');
+
+       
       
         $model->status=1;
         $model->save();

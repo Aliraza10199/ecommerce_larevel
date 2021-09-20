@@ -1,0 +1,35 @@
+$custom_color: #000;
+
+//buttons
+$button_color: #fff;
+$button_bg: #000;
+$button-hover_color: #000;
+$button_hover_bg: #fff;
+$button_border: 1px;
+$button_border_color: #000;
+$button-hover_border_color: #000;
+
+$product-title_color: #000;
+$product-title-hover_color: #b4b4b4;
+$product-icon-link-hover_color: #b4b4b4;
+$label_sale_bg: #000;
+
+$product-rating-fill_color: #000;
+
+$minicart-product-name-hover_color: #b4b4b4;
+$minicart-action-hover_color: #b4b4b4;
+
+$header-topline-dark-link-hover_color: #b4b4b4 !default;
+$header-topline-dark-link_active_color: #b4b4b4 !default;
+$header-topline-dark-icon_color: #b4b4b4 !default;
+$header-topline-dark-icon-hover_color: #b4b4b4 !default;
+$header-topline-dark-icon_active_color: #b4b4b4 !default;
+$header-topline-dark-custom-text-span_color: #b4b4b4 !default;
+$header-topline-rotate-social-hover_color: #b4b4b4 !default;
+
+$product-tabs_color: #b4b4b4;
+
+@import "_variables.scss";
+@import "_mixins.scss";
+
+@import "_style-all.scss";

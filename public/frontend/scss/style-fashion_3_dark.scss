@@ -1,0 +1,54 @@
+$custom_color: #000;
+
+$header-custom-text-span_color: #b4b4b4;
+
+$form_border_color: #1d1d1d;
+
+$product_bg-hover_default: #383838;
+$product-title_color: #fff;
+$product-title-hover_color: #b4b4b4;
+$product-rating_color: #b4b4b4;
+$product-rating-fill_color: #b4b4b4;
+$product-price_old_color: #7c7c7c;
+$product-icon-link_color: #fff;
+$product-title_color: #fff;
+$product-title-hover_color: #b4b4b4;
+$product-icon-link-hover_color: #b4b4b4;
+$label_sale_bg: #000;
+
+$button_color: #fff;
+$button_bg: #000;
+$button-hover_color: #000;
+$button_hover_bg: #fff;
+$button_border: 1px;
+$button_border_color: #000;
+$button-hover_border_color: #000;
+
+$button-decor_border_color: #fff;
+
+$minicart-product-name-hover_color: #b4b4b4;
+$minicart-action-hover_color: #b4b4b4;
+
+$instagram-feed-text_color: #000;
+$instagram-feed-text_bg: #fff;
+
+
+$header-topline-dark-link-hover_color: #b4b4b4;
+$header-topline-dark-link_active_color: #b4b4b4;
+$header-topline-dark-icon_color: #b4b4b4;
+$header-topline-dark-icon-hover_color: #b4b4b4;
+$header-topline-dark-icon_active_color: #b4b4b4;
+$header-topline-dark-custom-text-span_color: #b4b4b4;
+$header-topline-rotate-social-hover_color: #b4b4b4;
+
+$desktop-menu-hover_color: #b4b4b4;
+$desktop-menu_line_color: #b4b4b4;
+
+$submenu-list-link_color: #7c7c7c;
+$submenu-list-link-hover_color: #fff;
+$submenu-list-link_active_color: #fff;
+
+@import "_variables-dark.scss";
+@import "_mixins.scss";
+
+@import "_style-all.scss";

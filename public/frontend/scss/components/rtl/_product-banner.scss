@@ -1,0 +1,32 @@
+/* product carousel banner */
+
+.prd-carousel-banner {
+  &.bnr--left {
+    @media (max-width: $screen-xs-max) {
+      text-align: right;
+    }
+  }
+  &.bnr--right {
+    @media (max-width: $screen-xs-max) {
+      text-align: left;
+    }
+  }
+  &:not(.bnr--center) .slick-arrows-squared {
+    .slick-prev {
+      left: 84px;
+      right: auto;
+      @media (max-width: $screen-xs-max) {
+        left: 69px;
+        right: auto;
+      }
+    }
+    .slick-next {
+      left: 30px;
+      right: auto;
+      @media (max-width: $screen-xs-max) {
+        left: 15px;
+        right: auto;
+      }
+    }
+  }
+}

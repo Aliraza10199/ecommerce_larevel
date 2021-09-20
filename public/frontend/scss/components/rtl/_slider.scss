@@ -1,0 +1,23 @@
+/* slider */
+
+.mainSlider {
+  .slide-content.left {
+    text-align: right;
+  }
+  .slide-content.right {
+    text-align: left;
+  }
+}
+
+[class*='col-'] .main-slider-wrap {
+  .main-slider-arrows {
+    .main-slider-arrows .slick-prev {
+      right: 7%;
+      left: auto;
+    }
+    .main-slider-arrows .slick-next {
+      left: 7%;
+      right: auto;
+    }
+  }
+}

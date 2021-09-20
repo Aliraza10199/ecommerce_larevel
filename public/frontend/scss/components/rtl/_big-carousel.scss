@@ -1,0 +1,38 @@
+/* big carousel rtl */
+
+.big-carousel-item {
+  &-caption {
+    margin-right: 10.5%;
+    margin-left: 0;
+    @media screen and (max-width: $screen-sm-max) {
+      margin-right: 75px;
+      margin-left: 0;
+    }
+    @media screen and (max-width: $screen-xs-max) {
+      margin-right: 0;
+    }
+  }
+}
+
+.aside .big-carousel-item {
+  &-caption {
+    @media screen and (max-width: $screen-sm-max) {
+      margin-right: 75px;
+      margin-left: 0;
+    }
+    @media screen and (max-width: $screen-xs-max) {
+      margin-right: 0;
+    }
+  }
+}
+
+.big-carousel:not(.slick-initialized) {
+  opacity: 0;
+  height: 80vh;
+  overflow: hidden !important;
+}
+
+.big-carousel.slick-initialized {
+  opacity: 1;
+  @include transition(opacity .5s ease .75s);
+}

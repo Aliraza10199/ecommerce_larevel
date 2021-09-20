@@ -6,7 +6,15 @@ use App\Http\Controllers\SizeController;
 use App\Http\Controllers\ColorController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\TaxController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\HomeBannerController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\Front\JazzCheckoutController;
+
+
+use App\Http\Controllers\Front\FrontController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,9 +28,113 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('adminpanal.demo');
+
+
+
+
+// Route::get('/checkoutjazz/{product_id}',[JazzCheckoutController::class,'index']);
+// Route::post('/checkoutjazz',[JazzCheckoutController::class,'DoCheckout']);
+
+
+
+
+
+
+
+
+// Route::get('/', function () {
+//     return view('adminpanal.demo');
+// });
+
+
+Route::get('/',[FrontController::class,'index']);
+
+Route::get('category/{id}',[FrontController::class,'category']);
+
+Route::get('product/{id}',[FrontController::class,'product']);
+
+Route::post('add_to_card',[FrontController::class,'add_to_card']);
+
+
+Route::get('/view_card',[FrontController::class,'view_card']);
+
+Route::get('search/{str}',[FrontController::class,'search']);
+
+Route::get('regestration',[FrontController::class,'regestration']);
+//customer data in databse using ajex post
+Route::post('regestration_process',[FrontController::class,'regestration_process'])->name('regestration.regestration_process');
+
+Route::get('login_user',[FrontController::class,'login_user']);
+
+Route::post('login_process',[FrontController::class,'login_process'])->name('login_user.login_process');
+//for logout user session end 
+Route::get('logout',function(){
+        
+    session()->forget('FRONT_USER_LOGIN');
+    session()->forget('FRONT_USER_ID');
+    session()->forget('FRONT_USER_NAME');
+    session()->forget('USER_TEMP_ID');
+    return redirect('/');
+
 });
+Route::get('/verification/{id}',[FrontController::class,'email_verification']);
+
+Route::post('forgot_password',[FrontController::class,'forgot_password']);
+
+Route::get('/forgot_password_change/{id}',[FrontController::class,'forgot_password_change']);
+
+Route::post('forgot_password_change_process',[FrontController::class,'forgot_password_change_process']);
+
+Route::get('/checkout',[FrontController::class,'checkout']);
+
+// Route::post('/checkout_manage',[FrontController::class,'checkout_manage'])->name('front.checkout_manage');
+Route::post('apply_coupon_code',[FrontController::class,'apply_coupon_code']);
+
+Route::post('remove_coupon_code',[FrontController::class,'remove_coupon_code']);
+
+Route::post('place_order',[FrontController::class,'place_order']);
+
+Route::get('/order_placed',[FrontController::class,'order_placed']);
+Route::get('/jazzcash_payment',[FrontController::class,'jazzcash_payment']);
+
+// jazzcashh_payments method routes`
+Route::get('/do_checkout_v',[FrontController::class,'do_checkout_v']);
+Route::post('/paymentStatus',[FrontController::class,'paymentStatus']);
+
+
+Route::post('/product_review_process',[FrontController::class,'reviews_product']);
+
+// NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+Route::group(['middleware'=>'user_auth'],function(){
+            
+        Route::get('/account_detail',[FrontController::class,'account_detail']);
+        Route::post('/account_detail_update',[FrontController::class,'account_detail_update']);
+
+        Route::get('/order_history',[FrontController::class,'order_history']);
+        Route::get('/order_detail/{id}',[FrontController::class,'order_detail']);
+
+
+        Route::get('/my_wishlist',[FrontController::class,'my_wishlist']);
+        Route::post('/wishlist_manage_ajax',[FrontController::class,'wishlist_manage_ajax']);
+
+       
+
+
+
+});
+// NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+
+Route::get('/contact_us',[FrontController::class,'contact_us']);
+Route::get('/faq',[FrontController::class,'faq']);
+Route::post('/wish_list_page',[FrontController::class,'wish_list_page']);
+Route::get('/about_us',[FrontController::class,'about_us']);
+Route::get('/all_products',[FrontController::class,'all_products']);
+Route::post('/ajex_related_pop_route',[FrontController::class,'ajex_related_pop_route']);
+
+Route::post('/wishlist_manage_ajax',[FrontController::class,'wishlist_manage_ajax']);
+Route::post('/wishlist_delete_product_ajax',[FrontController::class,'wishlist_delete_product_ajax']);
+
+
 
 //route of admin login page
 Route::get('admin',[AdminController::class,'index']);
@@ -31,6 +143,11 @@ Route::post('admin/auth',[AdminController::class,'auth'])->name('adminpanal.auth
 
 
 
+
+
+
+
+// NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
 //just login admin have acces of dashboad and catagory pages otherwise redirect to login page
 Route::group(['middleware'=>'admin_auth'],function(){
     
@@ -39,6 +156,7 @@ Route::group(['middleware'=>'admin_auth'],function(){
     //for category routes 
     Route::get('admin/category',[CategoryController::class,'index']);
     Route::get('admin/category/manage_category',[CategoryController::class,'manage_category']);
+    // Route::get('admin/updatepassword',[AdminController::class,'updatepassword']);
   
     //for edit category
     Route::get('admin/category/manage_category/{id}',[CategoryController::class,'manage_category']);
@@ -159,6 +277,48 @@ Route::group(['middleware'=>'admin_auth'],function(){
     //route to status active deactive from 0/1 dattabse to customer
     Route::get('admin/customer/status/{status}/{id}',[CustomerController::class,'status']);
 
+
+    //For Tax routes
+    Route::get('admin/tax',[TaxController::class,'index']);
+    Route::get('admin/tax/manage_tax',[TaxController::class,'manage_tax']);
+
+    //for edit tax
+    Route::get('admin/tax/manage_tax/{id}',[TaxController::class,'manage_tax']);
+
+    //for insert submit coupon data into database and redirect to cotaxlor 
+    Route::post('admin/tax/manage_tax_process',[TaxController::class,'manage_tax_process'])->name('tax.maanage_tax_process');
+
+    //route to delete from ID dattabse to size
+    Route::get('admin/tax/delete/{id}',[TaxController::class,'delete']);
+
+    //route to status active deactive from 0/1 dattabse to tax
+    Route::get('admin/tax/status/{status}/{id}',[TaxController::class,'status']);
+
+
+    //For home_banner routes
+    Route::get('admin/home_banner',[HomeBannerController::class,'index']);
+    Route::get('admin/home_banner/manage_home_banner',[HomeBannerController::class,'manage_home_banner']);
+
+    //for edit home_banner
+    Route::get('admin/home_banner/manage_home_banner/{id}',[HomeBannerController::class,'manage_home_banner']);
+
+    //for insert submit coupon data into database and redirect to home_banner 
+    Route::post('admin/home_banner/manage_home_banner_process',[HomeBannerController::class,'manage_home_banner_process'])->name('home_banner.maanage_home_banner_process');
+
+    //route to delete from ID dattabse to size
+    Route::get('admin/home_banner/delete/{id}',[HomeBannerController::class,'delete']);
+
+    //route to status active deactive from 0/1 dattabse to home_banner
+    Route::get('admin/home_banner/status/{status}/{id}',[HomeBannerController::class,'status']);
+
+
+
+    //route for order
+    Route::get('admin/order',[OrderController::class,'index']);
+    Route::get('admin/order_detail/{id}',[OrderController::class,'order_detail']);
+    Route::get('admin/update_payment_status/{status}/{id}',[OrderController::class,'update_payment_status']);
+    Route::get('admin/update_order_status/{status}/{id}',[OrderController::class,'update_order_status']);
+    Route::post('admin/order_detail/{id}',[OrderController::class,'update_track_detail']);
 
 
 

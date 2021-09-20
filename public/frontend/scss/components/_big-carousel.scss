@@ -1,0 +1,211 @@
+.big-carousel {
+  @media screen and (max-width: $screen-xs-max) {
+    padding-bottom: 35px;
+  }
+}
+
+.big-carousel-item {
+  position: relative;
+  @media screen and (max-width: $screen-xs-max) {
+    text-align: center;
+  }
+}
+
+.big-carousel-item-image {
+  padding: 0 15px;
+  @media screen and (max-width: $screen-md-max) {
+    padding: 0;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.big-carousel-item-caption-wrap {
+  @include fullAbsolute;
+  @include flexbox();
+  @include align-items(center);
+  z-index: 1;
+  @media screen and (max-width: $screen-xs-max) {
+    position: relative;
+  }
+}
+
+.big-carousel-item-caption {
+  margin-left: 10.5%;
+  width: 518px;
+  background-color: $big-slide-caption_bg;
+  color: $big-slide-caption_color;
+  padding: 80px 50px;
+  @media screen and (max-width: $screen-xl-max) {
+    padding: 60px 40px;
+    width: 500px;
+  }
+  @media screen and (max-width: $screen-lg-max) {
+    padding: 50px 30px;
+    width: 500px;
+  }
+  @media screen and (max-width: $screen-md-max) {
+    padding: 40px 20px;
+    width: 400px;
+  }
+  @media screen and (max-width: $screen-sm-max) {
+    margin-left: 75px;
+    padding: 30px 20px;
+    max-width: calc(100% - 150px);
+  }
+  @media screen and (max-width: $screen-xs-max) {
+    margin-left: 0;
+    padding: 20px 25px;
+    max-width: 100%;
+  }
+  & > * {
+    margin-bottom: 0;
+  }
+  & > *:not(:first-child) {
+    margin-top: 40px;
+    @media screen and (max-width: $screen-xl-max) {
+      margin-top: 30px;
+    }
+    @media screen and (max-width: $screen-sm-max) {
+      margin-top: 20px;
+    }
+    @media screen and (max-width: $screen-xs-max) {
+      margin-top: 15px;
+    }
+  }
+}
+
+.big-carousel-item-title {
+  font-size: 24px;
+  line-height: 1.2em;
+  font-weight: 800;
+  color: $big-slide-title_color;
+  @media screen and (max-width: $screen-sm-max) {
+    font-size: 18px;
+  }
+}
+
+.big-carousel-item-subtitle {
+  font-size: 14px;
+  line-height: 1.2em;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: $big-slide-subtitle_color;
+  &:not(:first-child) {
+    margin-top: 10px;
+    @media screen and (max-width: $screen-sm-max) {
+      margin-top: 5px;
+    }
+  }
+  @media screen and (max-width: $screen-sm-max) {
+    font-size: 13px;
+  }
+}
+
+.aside .big-carousel-item {
+  .big-carousel-item-image {
+    padding: 0;
+  }
+}
+
+.aside .big-carousel-item-caption {
+  padding: 50px 40px;
+  width: 500px;
+  max-width: 79%;
+  @media screen and (max-width: $screen-md-max) {
+    padding: 30px 20px;
+    width: 500px;
+  }
+  @media screen and (max-width: $screen-sm-max) {
+    margin-left: 75px;
+    padding: 30px 20px;
+    max-width: calc(100% - 150px);
+  }
+  @media screen and (max-width: $screen-xs-max) {
+    margin-left: 0;
+    padding: 20px 25px;
+    max-width: 100%;
+  }
+}
+
+.big-carousel {
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    height: 44px;
+    width: 44px;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    background: $slick-arrow_bg;
+    top: 50%;
+    padding: 0;
+    margin-top: -22px;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    @include transition (0.2s);
+    &:hover {
+      background: $slick-arrow-hover_bg;
+    }
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    display: inline-block;
+    font-size: 25px;
+    line-height: 45px;
+    color: $slick-arrow_color-dark;
+    opacity: 1;
+    @media screen and (max-width: $screen-xs-max) {
+      font-size: 24px;
+      line-height: 44px;
+    }
+  }
+  .slick-prev:hover:before,
+  .slick-next:hover:before {
+    color: $slick-arrow_color-dark;
+    opacity: 1;
+  }
+  .slick-prev {
+    left: 43px;
+    right: auto;
+    @media screen and (max-width: $screen-md-max) {
+      left: 20px;
+    }
+    @media screen and (max-width: $screen-sm-max) {
+      left: 12px;
+    }
+  }
+  .slick-next {
+    right: 43px;
+    left: auto;
+    @media screen and (max-width: $screen-md-max) {
+      right: 20px;
+    }
+    @media screen and (max-width: $screen-sm-max) {
+      right: 12px;
+    }
+  }
+}
+
+.aside .big-carousel .slick-prev {
+  left: 15px;
+}
+
+.aside .big-carousel .slick-next {
+  right: 15px;
+}
+
+.big-carousel:not(.slick-initialized) {
+  opacity: 0;
+  height: 80vh;
+  overflow: hidden !important;
+}
+
+.big-carousel.slick-initialized {
+  opacity: 1;
+  @include transition(opacity .5s ease .75s);
+}

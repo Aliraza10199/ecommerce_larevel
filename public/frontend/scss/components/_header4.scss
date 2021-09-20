@@ -1,0 +1,32 @@
+/* header 04 */
+@media screen and (min-width: $mobile-menu-breikpoint) {
+  .hdr-style-4 {
+    .hdr-content .dropdn-link {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .dropdn.dropdn_search .dropdn-link > i.icon {
+      font-size: 21px;
+      padding-right: 0;
+    }
+    .search-holder {
+      flex: inherit;
+    }
+    .hdr-topline-right > * {
+      margin-right: 0;
+    }
+    .hdr-content-right {
+      @include flexbox();
+      @include align-items(center);
+      & > *:not(:first-child) {
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: ($mobile-menu-breikpoint - 1)) {
+  .hdr-topline-right > .dropdn.dropdn_account > a {
+    padding-right: 0;
+  }
+}

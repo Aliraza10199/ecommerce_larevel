@@ -1,0 +1,44 @@
+/* size swatch rtl */
+
+.size-swatch {
+  li {
+    float: right;
+    & > * {
+      margin: 0 0 0 8px;
+    }
+    &:first-child > * {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+.sidebar-block {
+  .size-list {
+    li {
+      margin: 0 0 7px 7px;
+      a:after {
+        padding: 0 6px 0 0;
+      }
+    }
+  }
+}
+
+.prd-block {
+  .size-list {
+    li {
+      margin: 2px 0 2px 7px;
+      @media screen and (max-width: $screen-sm-max) {
+        margin-right: 0;
+        margin-left: 5px;
+      }
+      span.value:after {
+        padding: 0 6px 0 0;
+      }
+      span + span {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+}

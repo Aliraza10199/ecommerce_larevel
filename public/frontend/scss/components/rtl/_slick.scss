@@ -1,0 +1,64 @@
+/* slick slider rtl */
+.slick-slider {
+  direction: ltr !important;
+}
+
+.slick-slider .slick-slide {
+  direction: rtl !important;
+}
+
+.slick-arrows-right {
+  padding-left: 65px;
+  padding-right: 0;
+  .slick-prev,
+  .slick-next {
+    right: auto;
+    left: 0;
+  }
+}
+
+.slick-dotted .slick-slider {
+  margin-bottom: 10px;
+}
+
+.vert-dots:not(.bnslider-dots) {
+  .slick-dots {
+    right: auto;
+    left: 5px;
+  }
+}
+
+.vert-dots.vert-dots--left:not(.bnslider-dots) {
+  .slick-dots {
+    right: 20px;
+    left: auto;
+  }
+}
+
+@media screen and (min-width: $screen-md-min) {
+  .vert-dots-md {
+    .slick-dots {
+      right: auto;
+      left: 20px;
+    }
+    &.vert-dots--left {
+      .slick-dots {
+        right: 20px;
+        left: auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-md-min) {
+  .aside {
+    .vert-dots .slick-dots {
+      left: 5px;
+      right: auto;
+    }
+    .vert-dots.vert-dots--left .slick-dots {
+      right: 20px;
+      left: auto;
+    }
+  }
+}

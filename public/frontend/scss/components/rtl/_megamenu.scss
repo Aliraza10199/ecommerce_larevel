@@ -1,0 +1,145 @@
+/* header megamenu rtl */
+
+.mmenu:not(.mmenu--vertical) {
+  & > li {
+    margin-right: 0;
+    margin-left: -4px;
+    & > a:not(:only-child) {
+      padding-left: 28px;
+      padding-right: 18px;
+    }
+    & > a:not(:only-child):after {
+      left: auto;
+      right: 0;
+      text-align: left;
+      transform: translate(5px, -9px);
+    }
+  }
+}
+
+.mmenu-item--mega .mmenu-submenu {
+  left: auto;
+  right: 0;
+  text-align: right;
+  .submenu-list > li > a {
+    &:not(:only-child) {
+      padding-right: 0;
+      padding-left: 25px;
+    }
+    &:not(:only-child):after {
+      right: auto;
+      left: 0;
+    }
+  }
+}
+
+.submenu-img {
+  margin: auto -20px 0 -21px;
+  .submenu-title-right {
+    left: auto;
+    right: 50%;
+  }
+}
+
+.submenu-list {
+  a {
+    &:not(:only-child) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    &:not(:only-child):after {
+      right: auto;
+      left: 15px;
+      @include rotate(180deg);
+    }
+  }
+}
+
+.mmenu-item--simple .mmenu-submenu {
+  text-align: right;
+  li:not(.to-right) > ul {
+    right: 100%;
+    left: auto;
+  }
+  li.to-right > ul {
+    left: 99.9%;
+    right: auto;
+  }
+}
+
+.mmenu-submenu .submenu-list li {
+  text-align: right;
+  ul {
+    &:before {
+      right: -1px;
+      left: auto;
+    }
+  }
+  li.to-right > ul {
+    left: 100% !important;
+    right: auto;
+  }
+}
+
+.mmenu-col {
+  border-left-width: 0;
+  border-right-width: 1px;
+  border-right-style: solid;
+  &:first-child {
+    border-right: 0 !important;
+  }
+}
+
+.mmenu-right {
+  padding: 0 24px 30px 14px;
+}
+
+.mmenu-bottom {
+  .prd-grid {
+    .prd-vertical-sm {
+      &:not(:first-child) {
+        border-left-width: 0;
+        border-right-width: 1px;
+        border-right-style: solid;
+      }
+    }
+  }
+}
+
+/* vertical menu */
+.mmenu.mmenu--vertical {
+  text-align: left;
+  .submenu-img {
+    margin: 0 -20px 0 -21px;
+  }
+  .mmenu-item--mega .mmenu-submenu {
+    right: auto;
+  }
+  .mmenu-item--simple .mmenu-submenu {
+    right: auto;
+  }
+  .mmenu-submenu .submenu-list li.to-right ul {
+    margin-right: 0;
+  }
+}
+
+.aside--right .mmenu.mmenu--vertical {
+  text-align: right;
+  .mmenu-item--simple .mmenu-submenu {
+    right: auto;
+    left: 100%;
+  }
+}
+
+body.dark-scheme .mmenu .mmenu-submenu.submenu-style-01, .mmenu .mmenu-submenu.submenu-style-01 {
+  .mmenu-col {
+    border-left-width: 0;
+    border-right-width: 1px;
+    border-right-style: solid;
+  }
+}
+
+.mmenu-preview {
+  right: 230px;
+  left: auto;
+}

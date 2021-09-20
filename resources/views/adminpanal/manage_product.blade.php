@@ -197,7 +197,91 @@ $image_required="";
                                         <label for="waranty" class="control-label mb-1">Waranty</label>
                                         <textarea id="waranty" name="waranty"    type="text" class="form-control" aria-required="true" aria-invalid="false" required">{{$waranty}}</textarea>
                                  
-                                    </div>                                                              
+                                    </div>    
+                                    
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label for="lead_time" class="control-label mb-1">Lead Time</label>
+                                                <input id="lead_time" name="lead_time" value="{{$lead_time}}"   type="text" class="form-control" aria-required="true" aria-invalid="false" >
+                                            
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="tax_id" class="control-label mb-1">Tax ID</label>
+                                                <select id="tax_id" name="tax_id"  type="text" class="form-control" aria-required="true" aria-invalid="false" required>
+                                                    <option value="">Select Tax</option>
+                                                        @foreach ($taxes as $list)
+                                                            @if($tax_id==$list->id)
+                                                            <option selected value="{{$list->id}}">
+                                                            @else
+                                                            <option value="{{$list->id}}">
+                                                                @endif
+                                                                {{$list->tax_desc}}</option>
+                                                        @endforeach
+                                                    </select>                                                            
+                                            </div>
+                                            {{-- <div class="col-md-4">
+                                                <label for="tax_type" class="control-label mb-1">Tax Type</label>
+                                                <input id="tax_type" name="tax_type" value="{{$tax_type}}"   type="text" class="form-control" aria-required="true" aria-invalid="false" >
+                                            
+                                            </div> --}}
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label for="is_promo" class="control-label mb-1">Is Promo</label>
+                                                <select id="is_promo" name="is_promo"  type="text" class="form-control" aria-required="true" aria-invalid="false" required>
+                                                    @if($is_promo=='1')
+                                                    <option value="1" selected>Yes</option>
+                                                    <option value="0">No</option>
+                                                    @else
+                                                        <option value="0" selected>No</option>
+                                                        <option value="1" >Yes</option>
+                                               
+                                                    @endif
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3">   
+                                                <label for="is_featured" class="control-label mb-1">Is Featured</label>
+                                                <select id="is_featured" name="is_featured"  type="text" class="form-control" aria-required="true" aria-invalid="false" required>
+                                                    @if($is_featured=='1')
+                                                    <option value="1" selected>Yes</option>
+                                                    <option value="0">No</option>
+                                                    @else
+                                                        <option value="0" selected>No</option>
+                                                        <option value="1" >Yes</option>
+                  
+                                                    @endif
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label for="is_discounted" class="control-label mb-1">Is discounted</label>
+                                                <select id="is_discounted" name="is_discounted"  type="text" class="form-control" aria-required="true" aria-invalid="false" required>
+                                                    @if($is_discounted=='1')
+                                                    <option value="1" selected>Yes</option>
+                                                    <option value="0">No</option>
+                                                    @else
+                                                        <option value="0" selected>No</option>
+                                                        <option value="1" >Yes</option>                  
+                                                    @endif
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label for="is_discounted" class="control-label mb-1">Is discounted</label>
+                                                <select id="is_discounted" name="is_discounted"  type="text" class="form-control" aria-required="true" aria-invalid="false" required>
+                                                    @if($is_discounted=='1')
+                                                    <option value="1" selected>Yes</option>
+                                                    <option value="0">No</option>
+                                                    @else
+                                                        <option value="0" selected>No</option>
+                                                        <option value="1" >Yes</option>                  
+                                                    @endif
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
                                 
                                 </div>
                             </div>

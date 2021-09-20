@@ -1,0 +1,12 @@
+/* tags list rtl */
+
+.tags-list {
+  li {
+    margin-right: 0;
+    margin-left: 6px;
+    @media (max-width: $screen-sm-max) {
+      margin-right: 0;
+      margin-left: 1px;
+    }
+  }
+}

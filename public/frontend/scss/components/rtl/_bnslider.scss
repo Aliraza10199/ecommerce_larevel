@@ -1,0 +1,19 @@
+/* BnSlider rtl */
+
+.bnslider-wrapper, .bnslider-wrapper * {
+  direction: ltr;
+}
+
+.bnslider-wrapper .bnslider-text-content .bnslider-text-content-flex .bnslider-vert,
+.bnslider-wrapper .bnslider-text-content .bnslider-text-content-flex .bnslider-vert *,
+.bnslider-wrapper .bnslider-pricing, .bnslider-wrapper .bnslider-pricing * {
+  direction: rtl;
+}
+
+.bnslider-pricing table td:last-child {
+  text-align: left;
+}
+
+.bnslider-pricing table td:first-child {
+  text-align: right;
+}

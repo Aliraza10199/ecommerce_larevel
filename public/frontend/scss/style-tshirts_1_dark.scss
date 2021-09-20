@@ -1,0 +1,93 @@
+$custom_color: #fd014e;
+
+$loader-dot-1_bg: #fd014e;
+$loader-dot-2_bg: #fff;
+$loader-dot-3_bg: #fd014e;
+
+@import "_variables-dark.scss";
+@import "_mixins.scss";
+
+@import "_style-all.scss";
+
+/*T-SHIRTS*/
+
+.hdr-wrap {
+  background-image: url(../images/home-tshirts/header-tshirts-bg.jpg) !important;
+}
+
+body.theme-dark .hdr-wrap {
+  background-image: url(../images/home-tshirts/header-tshirts-bg-dark.jpg) !important;
+}
+
+@media screen and (min-width: 992px) {
+  body.theme-dark .hdr-wrap {
+    min-height: 0;
+  }
+}
+
+body.home-page .page-content .holder:last-of-type {
+  padding-top: 160px;
+  padding-bottom: 160px;
+  background-position: center top;
+  background-size: cover;
+  background-image: url(../images/home-tshirts/bg-tshirts-carousel.jpg) !important;
+}
+
+body.home-page.theme-dark .page-content .holder:last-of-type {
+  padding-top: 60px;
+  background-image: url(../images/home-tshirts/bg-tshirts-carousel-dark.jpg) !important;
+}
+
+body:not(.theme-dark) .page-content .holder + .holder:last-of-type {
+  margin-top: -20px !important;
+}
+
+.page-content > .holder:last-of-type {
+  padding-bottom: 200px !important;
+}
+
+@media screen and (max-width: 1199px) {
+  .page-content .holder:last-of-type {
+    padding-bottom: 160px !important;
+  }
+  .page-content .holder:last-of-type {
+    padding-bottom: 140px !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .page-content .holder:last-of-type {
+    padding-bottom: 120px !important;
+  }
+}
+
+.page-content > .container {
+  padding-bottom: 200px !important;
+}
+
+@media screen and (min-width: 992px) {
+  .page-content > .container {
+    padding-bottom: 140px !important;
+  }
+  .holder-bg-carousel {
+    min-height: 500px;
+  }
+}
+
+body.home-page.theme-dark .page-content .holder:last-of-type {
+  padding-top: 65px;
+  background-color: transparent;
+  background-image: none !important;
+}
+
+@media screen and (min-width: 992px) {
+  body.home-page.theme-dark .page-content .holder:last-of-type {
+    padding-top: 50px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  body.home-page.theme-dark .page-content .holder:last-of-type {
+    padding-top: 40px;
+  }
+}

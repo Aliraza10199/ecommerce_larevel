@@ -1,0 +1,1029 @@
+//=================== VARIABLES ====================
+//
+//===================================================
+//
+//  $variable name: property (color, font family, etc ) !default;
+//
+//  You can change only property (right part of expression).
+//  Do not change the variable name!!!
+//
+//  Some properties inherit other variables, e.g.:
+//  $heading_color: $text_color_dark !default;
+//
+//  You can change this property to your own, e.g.:
+//  $heading_color: #ff00ff;
+//
+//====================================================
+
+//custom fonts family
+$heading_font_family: 'Montserrat', sans-serif !default;
+$body_font_family: 'Open Sans', sans-serif !default;
+
+//main color
+$custom_color: #27c7d8 !default;
+
+$text_color_dark: #000 !default;
+$text_color_middle: #2d2c2c !default;
+$text_color_light: #656565 !default;
+$text_color_lighter: #b4b4b4 !default;
+
+$decor_border_color: #f7f7f7 !default;
+$decor_border_color_darker: #e2e2e2 !default;
+
+//body main
+$body_bg: #fff !default;
+
+$body_text_letterspacing: 0 !default;
+$body_text_color: $text_color_light !default;
+
+$body_link_color: $custom_color !default;
+$body_link_color_hover: $body_text_color !default;
+
+//typography
+$heading_color: $text_color_dark !default;
+$heading_category_color: #fff !default;
+$heading_category_bg: $custom_color !default;
+$heading_border_color: $decor_border_color !default;
+
+$marker_text_color: #fff !default;
+$marker_text_bg: $custom_color !default;
+
+$card_bg: #fff !default;
+$card-light_bg: #fbfbfb !default;
+
+$list-group_bg: transparent !default;
+$list-group_color: $body_text_color !default;
+$list-group_border_color: $decor_border_color !default;
+$list-group-hover_bg: #f7f7f7 !default;
+$list-group-hover_color: $body_text_color !default;
+$list-group-active_bg: $custom_color !default;
+$list-group-active_color: #fff !default;
+
+$line_divider_color: $decor_border_color !default;
+$holder-divider_color: $decor_border_color !default;
+
+$holder_bg: #f7f7f7 !default;
+$holder_bg-1: $custom_color !default;
+$holder_bg-2: #f3f4f6 !default;
+$holder_bg-4: #fff !default;
+$holder_bg-5: #f8fdfe !default;
+$holder_bg-6: #f8fdfe !default;
+$holder_bg-7: #f9f9fa !default;
+$holder_bg-8: #f7fcff !default;
+$holder_bg-9: #f9f9fa !default;
+$holder_bg-10: #f9f9fa !default;
+$holder_bg-11: #f7f7f7 !default;
+$holder_bg-12: #f3f4f6 !default;
+$holder_bg-13: #54555d !default;
+$holder_bg-14: #f3f4f6 !default;
+$holder_bg-15: #f3f4f6 !default;
+$holder_bg-16: #f7f7f7 !default;
+$holder_bg-17: #f7f7f7 !default;
+
+$social_text_color: $text_color_lighter !default;
+$social_text_color_hover: $custom_color !default;
+
+$social-color_text_color: $custom_color !default;
+$social-color_text_color_hover: $text_color_lighter !default;
+
+$social-circle_text_color: $text_color_lighter !default;
+$social-circle_border_color: $text_color_lighter !default;
+$social-circle_bg: transparent !default;
+$social-circle_text_color_hover: #fff !default;
+$social-circle_border_color_hover: $custom_color !default;
+$social-circle_bg_hover: $custom_color !default;
+
+$social-circle-color_text_color: #fff !default;
+$social-circle-color_border_color: $custom_color !default;
+$social-circle-color_bg: $custom_color !default;
+$social-circle-color_text_color_hover: $text_color_lighter !default;
+$social-circle-color_border_color_hover: $text_color_lighter !default;
+$social-circle-color_bg_hover: transparent !default;
+
+$list-marker_color: $custom_color !default;
+$list-arrow_color: $text_color_dark !default;
+$list-number_color: $text_color_dark !default;
+
+$table_border_color: $decor_border_color !default;
+$table_title_color: $text_color_dark !default;
+$table-striped_bg: $decor_border_color !default;
+
+$table-size_text_color: #000000 !default;
+$table-size_title_color: #9f9f9f !default;
+
+$blockquote_text_color: #868686 !default;
+$blockquote_bg: #f3f4f6 !default;
+$blockquote_border_color: $custom_color !default;
+$blockquote-author_text-color: $heading_color !default;
+
+$pagination_text_color: $text_color_light !default;
+$pagination_border_color: $decor_border_color_darker !default;
+$pagination_bg: #fff !default;
+$pagination_text_color_hover: $text_color_dark !default;
+$pagination_border_color_hover: $decor_border_color_darker !default;
+$pagination_bg_hover: $decor_border_color !default;
+$pagination_text_color_active: #fff !default;
+$pagination_border_color_active: $custom_color !default;
+$pagination_bg_active: $custom_color !default;
+
+$alert_text_color: #fff !default;
+$alert-success_bg: #77b900 !default;
+$alert-info_bg: #27c7d8 !default;
+$alert-warning_bg: #efa300 !default;
+$alert-danger_bg: #e53d60 !default;
+
+$contact-info-icon_text_color: $text_color_dark !default;
+$contact-info-title_text_color: $text_color_dark !default;
+
+$page404_text_color: $text_color_dark !default;
+
+$block-icon-and-text_text_color: $text_color_dark !default;
+
+//forms
+$form_color: $text_color_light !default;
+$form_color_light: $text_color_lighter !default; // placeholder
+$form_color_disable: $text_color_lighter !default;
+$form_border_color: $decor_border_color_darker !default;
+$form_bg: #fff !default;
+
+$form-success_color: #15c979 !default;
+$form-success_border_color: #15c979 !default;
+$form-error_color: #e53d60 !default;
+$form-error_border_color: #e53d60 !default;
+$form-required_color: #e53d60 !default;
+
+$form-element_bg: #fff !default;
+$form-element_hover_bg: #f8f8f8 !default;
+$form-element_symbol_color: #000 !default;
+
+$form-label_color: $body_text_color !default;
+
+$input-group-btn_color: #000 !default;
+$input-group-btn_bg: #fff !default;
+
+$dropdown-select-active_color: #fff !default;
+$dropdown-select-active_bg: $custom_color !default;
+
+$qty-changer_button_color: $form_color !default;
+$qty-changer_button_border_color: $decor_border_color_darker !default;
+$qty-changer_button_bg: $form_bg !default;
+$qty-changer_button-hover_color: $custom_color !default;
+$qty-changer_button_hover_border_color: $custom_color !default;
+$qty-changer_button_hover_bg: $form_bg !default;
+$qty-changer_input_color: $text_color_dark !default;
+$qty-changer_input_border_color: $form_border_color !default;
+$qty-changer_input_bg: $form_bg !default;
+
+// tags
+$tag_text_color: $text_color_light !default;
+$tag_border_color: $decor_border_color_darker !default;
+$tag_bg: transparent !default;
+$tag_hover_text_color: $custom_color !default;
+$tag_hover_border_color: $custom_color !default;
+$tag_hover_bg: transparent !default;
+$tag_active_text_color: $custom_color !default;
+$tag_active_border_color: $custom_color !default;
+$tag_active_bg: transparent !default;
+
+// breadcrumbs
+$breadcrumbs_color: $text_color_light;
+$breadcrumbs-hover_color: $custom_color;
+
+// loader
+$loader-spinner_border_color: rgba(100, 100, 100, .5) !default;
+$loader-spinner_spin_color: #fff !default;
+$ajax-loader_bg: rgba(255, 255, 255, .9) !default;
+
+$loader-dot-1_bg: #27c7d8 !default;
+$loader-dot-2_bg: #15c979 !default;
+$loader-dot-3_bg: #e53d60 !default;
+
+//buttons
+$button_color: #fff !default;
+$button_bg: $custom_color !default;
+$button-hover_color: #fff !default;
+$button_hover_bg: #000 !default;
+$button_bg_grey: #bcbcbc !default;
+
+$button-decor_color: $text_color_dark !default;
+$button-decor_border_color: $custom_color !default;
+$button-decor-white_color: #fff !default;
+$button-decor-whiteline_color: #fff !default;
+$button-decor-darkline_color: #000 !default;
+
+$button-added-to-cart-animate_color: #fff !default;
+$button-added-to-cart-animate_bg: #15c979 !default;
+
+// header
+// header color
+$header_bg: transparent !default;
+$header_border_color: $decor_border_color !default;
+
+$header_text_color: $text_color_light !default;
+$header-link_color: $text_color_light !default;
+$header-link-hover_color: $custom_color !default;
+$header-link_active_color: $custom_color !default;
+$header-icon_color: $text_color_middle !default;
+$header-icon-hover_color: $custom_color !default;
+$header-icon_active_color: $custom_color !default;
+$header-custom-text-span_color: $custom_color !default;
+
+// header social link color
+$header-social_color: $text_color_lighter !default;
+$header-social-hover_color: $custom_color !default;
+
+// header desktop main menu (first level)
+$desktop-menu_font_size: 14px !default;
+$desktop-menu_font_family: $heading_font_family !default;
+$desktop-menu_color: $text_color_middle !default;
+$desktop-menu-hover_color: $custom_color !default;
+$desktop-menu_line_color: $custom_color !default;
+
+// header desktop main menu (first level) - HEADER 05
+$desktop-menu-dark_bg: #000 !default;
+$desktop-menu-dark_color: #fff !default;
+$desktop-menu-dark-hover_color: #fff !default;
+$desktop-menu-dark_line_color: $custom_color !default;
+
+// header desktop main menu (first level) - HEADER 06
+$desktop-menu-color_bg: $custom_color !default;
+$desktop-menu-color_color: #fff !default;
+$desktop-menu-color-hover_color: #fff !default;
+$desktop-menu-color_line_color: #000 !default;
+
+// header desktop main menu grey (first level) - HEADER 15
+$desktop-menu-grey_bg: #f8f8fa !default;
+$desktop-menu-grey_color: #000 !default;
+$desktop-menu-grey-hover_color: #000 !default;
+$desktop-menu-grey_line_color: $custom_color !default;
+
+// header megamenu dropdown
+$mmenu_bg: #fff !default;
+$mmenu-title_color: $text_color_middle !default;
+$mmenu-title-hover_color: $custom_color !default;
+$mmenu-link_color: $text_color_middle !default;
+$mmenu-link-hover_color: $custom_color !default;
+$mmenu-column-divider_color: $decor_border_color !default;
+$mmenu-top-bottom-divider_color: $decor_border_color !default;
+$mmenu-bottom_text_color: $text_color_light !default;
+$mmenu-bottom-brands_bg: #f9f9fa !default;
+$mmenu-bottom-span_color: $custom_color !default;
+
+$mmenu-vertical_bg: #fff !default;
+$mmenu-vertical-link_color: $text_color_middle !default;
+$mmenu-vertical-link-hover_color: $custom_color !default;
+$mmenu-vertical-link_active_color: $custom_color !default;
+$mmenu-vertical-arrow_color: $text_color_middle !default;
+$mmenu-vertical_border_color: #f7f7f7 !default;
+$mmenu-vertical_dropdown-outer_border_color: #f7f7f7 !default;
+
+$mmenu-product-grid_bg: #f9f9fa !default;
+$mmenu-product-grid_border_color: #ebebeb !default;
+
+$submenu-view-more_color: $text_color_middle !default;
+$submenu-view-more-hover_color: $custom_color !default;
+
+// menu labels
+$menu-label_bg: $custom_color !default;
+$menu-label_color: #fff !default;
+$menu-label-1_bg: #27c7d8 !default;
+$menu-label-2_bg: #ffc427 !default;
+$menu-label-3_bg: #e53d60 !default;
+$menu-label-4_bg: #15c979 !default;
+
+// header submenu style 01
+$submenu-style-01_bg: #3c3329 !default;
+$submenu-style-01-view-more_color: #fff !default;
+$submenu-style-01-view-more-hover_color: #8d857a !default;
+$submenu-style-01-title_color: #fff !default;
+$submenu-style-01-title-hover_color: #8d857a !default;
+$submenu-style-01-link_color: #8d857a !default;
+$submenu-style-01-link-hover_color: #fff !default;
+$submenu-style-01-arrow_color: $submenu-style-01-link_color !default;
+$submenu-style-01-arrow-hover_color: $submenu-style-01-link-hover_color !default;
+$submenu-style-01-column-divider_color: #3c3329 !default;
+$submenu-style-01-bottom-span_color: #27c7d8 !default;
+
+// header submenu style 02
+$submenu-style-02_bg: #fffefe !default;
+$submenu-style-02-view-more_color: #2d2c2c !default;
+$submenu-style-02-view-more-hover_color: $custom_color !default;
+$submenu-style-02-title_color: #2d2c2c !default;
+$submenu-style-02-title-hover_color: $custom_color !default;
+$submenu-style-02-link_color: #656565 !default;
+$submenu-style-02-link-hover_color: $custom_color !default;
+$submenu-style-02-arrow_color: $submenu-style-01-link_color !default;
+$submenu-style-02-arrow-hover_color: $submenu-style-01-link-hover_color !default;
+$submenu-style-02-column-divider_color: #f7f7f7 !default;
+$submenu-style-02-bottom-span_color: #656565 !default;
+
+// header submenu list
+$submenu-list-link_color: $text_color_middle !default;
+$submenu-list-link-hover_color: $custom_color !default;
+$submenu-list-link_active_color: $custom_color !default;
+$submenu-list-arrow_color: $submenu-list-link_color !default;
+$submenu-list-arrow-hover_color: $submenu-list-link-hover_color !default;
+$submenu-list-arrow_active_color: $submenu-list-link_active_color !default;
+
+// header topline
+$header-topline_bg: #fff !default;
+$header-topline_text_color: $text_color_light !default;
+$header-topline-link_color: $text_color_light !default;
+$header-topline-link-hover_color: $custom_color !default;
+$header-topline-link_active_color: $custom_color !default;
+$header-topline-icon_color: $custom_color !default;
+$header-topline-icon-hover_color: $custom_color !default;
+$header-topline-icon_active_color: $custom_color !default;
+$header-topline-custom-text-span_color: $custom_color !default;
+
+// header topline color bg
+$header-topline-color_bg: $custom_color !default;
+$header-topline-color_text_color: #f0f1f3 !default;
+$header-topline-color-link_color: #f0f1f3 !default;
+$header-topline-color-link-hover_color: #fff !default;
+$header-topline-color-link_active_color: #fff !default;
+$header-topline-color-icon_color: #fff !default;
+$header-topline-color-icon-hover_color: #fff !default;
+$header-topline-color-icon_active_color: #fff !default;
+$header-topline-color-custom-text-span_color: #fff !default;
+
+// header topline dark
+$header-topline-dark_bg: #000 !default;
+$header-topline-dark_text_color: #fff !default;
+$header-topline-dark-link_color: #fff !default;
+$header-topline-dark-link-hover_color: $custom_color !default;
+$header-topline-dark-link_active_color: $custom_color !default;
+$header-topline-dark-icon_color: $custom_color !default;
+$header-topline-dark-icon-hover_color: $custom_color !default;
+$header-topline-dark-icon_active_color: $custom_color !default;
+$header-topline-dark-custom-text-span_color: $custom_color !default;
+
+// header topline rotate
+$header-topline-rotate_text_color: #000 !default;
+$header-topline-rotate-link_color: #000 !default;
+$header-topline-rotate-link-hover_color: $custom_color !default;
+$header-topline-rotate-link_active_color: $custom_color !default;
+$header-topline-rotate-icon_color: #000 !default;
+$header-topline-rotate-icon-hover_color: $custom_color !default;
+$header-topline-rotate-icon_active_color: $custom_color !default;
+$header-topline-rotate-custom-text-span_color: $custom_color !default;
+$header-topline-rotate-social_color: #000 !default;
+$header-topline-rotate-social-hover_color: $custom_color !default;
+
+// header dropdown
+$header_dropdown_bg: #fff !default;
+$header_dropdown_color: $text_color_light !default;
+$header_dropdown-link_color: $text_color_light !default;
+$header_dropdown-link-hover_color: $custom_color !default;
+$header_dropdown-link-active_color: $custom_color !default;
+$header_dropdown-icon_color: $custom_color !default;
+
+// header search
+$header-search-input_color: $text_color_light !default;
+$header-search-input_bg: transparent !default;
+$header-search-border-color: $header_border_color !default;
+$header-search-active-border-color: $custom_color !default;
+$header-search-popular_color: $text_color_dark !default;
+$header-search-popular-link_color: $text_color_light !default;
+$header-search-popular-link-hover_color: $custom_color !default;
+
+// header logo
+$logo_width: 195px !default;
+$header_logo_padding: 17px !default;
+
+// header sticky
+$sticky_pad: 5px !default;
+$sticky_opacity: 1 !default;
+$sticky_bg: #fff !default;
+$sticky-desktop-menu_color: $desktop-menu_color !default;
+$sticky-desktop-menu-hover_color: $desktop-menu-hover_color !default;
+$sticky-desktop-menu_line_color: $desktop-menu_line_color !default;
+$sticky-mobile_bg: #fff !default;
+$sticky-mobile-icon_color: #000 !default;
+
+// header minicartf
+$minicart-total_color: $text_color_middle !default;
+$minicart-drop_bg: #fff !default;
+$minicart-drop_border_color: $header_border_color !default;
+$minicart-drop-link-color: $custom_color !default;
+$minicart-drop-link-hover_color: $text_color_dark !default;
+$minicart-drop_text_color: $text_color_light !default;
+$minicart-drop-bold_text_color: $text_color_dark !default;
+$minicart-drop_title_color: $heading_color !default;
+$minicart-product-category_color: $text_color_light !default;
+$minicart-product-category-hover_color: $custom_color !default;
+$minicart-product-name_color: $text_color_dark !default;
+$minicart-product-name-hover_color: $custom_color !default;
+$minicart-action_color: $custom_color !default;
+$minicart-action-hover_color: $text_color_dark !default;
+$minicart-product_border_color: $header_border_color !default;
+$minicart-drop-total_bg: #fbfbfb !default;
+$minicart-drop-total_text_color: $text_color_light !default;
+$minicart-drop-total-summa_text_color: $text_color_dark !default;
+
+// header mobile color
+$header-mobile_bg: transparent !default;
+$header-mobile_border_color: $decor_border_color !default;
+$header-mobile_icon_color: $text_color_dark !default;
+
+// header mobile topline
+$header-mobile_topline_bg: $custom_color !default;
+$header-mobile_topline_color: #fff !default;
+$header-mobile_topline_link_color: #fff !default;
+$header-mobile_topline-icon_color: #fff !default;
+$header-mobile-custom-text-span_color: #fff !default;
+
+// header mobilemenu
+$mobilemenu_bg: #f8f8fa !default;
+$mobilemenu_border_color: #e2e2e2 !default;
+$mobilemenu_nav_bg: #fff !default;
+$mobilemenu_nav_color: $text_color_dark !default;
+$mobilemenu_nav_hover_bg: #f8f8fa !default;
+$mobilemenu_nav-hover_color: $custom_color !default;
+$mobilemenu_subnav_color: #656565 !default;
+
+$mobilemenu_drop-link_color: $text_color_dark !default;
+$mobilemenu_drop-link-active_color: $custom_color !default;
+$mobilemenu_drop-link-light_color: #868686 !default;
+
+$mobilemenu-drop-close_bg: $custom_color !default;
+$mobilemenu-drop-close_color: #fff !default;
+
+// always dark background header
+$desktop-dark-menu_color: #fff !default;
+$desktop-dark-menu-hover_color: $custom_color !default;
+$desktop-dark-menu_line_color: $custom_color !default;
+
+$header-dark_bg: transparent !default;
+$header-dark_text_color: #868686 !default;
+$header-dark-link_color: #868686 !default;
+$header-dark-link-hover_color: $custom_color !default;
+$header-dark-link_active_color: $custom_color !default;
+$header-dark-icon_color: #fff !default;
+$header-dark-icon-hover_color: $custom_color !default;
+$header-dark-icon_active_color: $custom_color !default;
+$header-dark_border_color: transparent !default;
+$header-dark-social_color: #656565 !default;
+$header-dark-social-hover_color: $custom_color !default;
+$header-dark-custom-text-span_color: $custom_color !default;
+
+// always light background header
+$desktop-light-menu_color: #2d2c2c !default;
+$desktop-light-menu-hover_color: $custom_color !default;
+$desktop-light-menu_line_color: $custom_color !default;
+
+$header-light_bg: transparent !default;
+$header-light_text_color: #2d2c2c !default;
+$header-light-link_color: #2d2c2c !default;
+$header-light-link-hover_color: $custom_color !default;
+$header-light-link_active_color: $custom_color !default;
+$header-light-icon_color: #2d2c2c !default;
+$header-light-icon-hover_color: $custom_color !default;
+$header-light-icon_active_color: $custom_color !default;
+$header-light_border_color: #f7f7f7 !default;
+$header-light-social_color: #2d2c2c !default;
+$header-light-social-hover_color: $custom_color !default;
+$header-light-custom-text-span_color: $custom_color !default;
+
+// header dark drop (header 05 - dark background - tshirt homepage style)
+    $header-dark-drop_border_color: #2d2d2d !default;
+    // header dark drop megamenu dropdown
+    $header-dark-drop-mmenu_bg: rgba(30, 30, 30, 1) !default;
+    $header-dark-drop-mmenu-title_color: #fff !default;
+    $header-dark-drop-mmenu-title-hover_color: $custom_color !default;
+    $header-dark-drop-mmenu-link_color: #7c7c7c !default;
+    $header-dark-drop-mmenu-link-hover_color: $custom_color !default;
+    $header-dark-drop-mmenu-column-divider_color: #373737 !default;
+    $header-dark-drop-mmenu-top-bottom-divider_color: #373737 !default;
+    $header-dark-drop-mmenu-bottom_text_color: #7c7c7c !default;
+    $header-dark-drop-mmenu-bottom-brands_bg: #292929 !default;
+    $header-dark-drop-mmenu-bottom-span_color: $custom_color !default;
+    $header-dark-drop-mmenu-product-grid_bg: #2d2c2c !default;
+    $header-dark-drop-mmenu-product-grid_border_color: #373737 !default;
+    $header-dark-drop-submenu-view-more_color: #fff !default;
+    $header-dark-drop-submenu-view-more-hover_color: $custom_color !default;
+
+    // header dark drop submenu list
+    $header-dark-drop-submenu-list-link_color: #7c7c7c !default;
+    $header-dark-drop-submenu-list-link-hover_color: $custom_color !default;
+    $header-dark-drop-submenu-list-link_active_color: $custom_color !default;
+    $header-dark-drop-submenu-list-arrow_color: $header-dark-drop-submenu-list-link_color !default;
+    $header-dark-drop-submenu-list-arrow-hover_color: $header-dark-drop-submenu-list-link-hover_color !default;
+    $header-dark-drop-submenu-list-arrow_active_color: $header-dark-drop-submenu-list-link_active_color !default;
+
+    // header dark drop dropdown
+    $header-dark-drop-dropdown_bg: rgba(30, 30, 30, 1) !default;
+    $header-dark-drop-dropdown_color: #868686 !default;
+    $header-dark-drop-dropdown-link_color: #868686 !default;
+    $header-dark-drop-dropdown-link-hover_color: $custom_color !default;
+    $header-dark-drop-dropdown-link-active_color: $custom_color !default;
+    $header-dark-drop-dropdown-icon_color: $custom_color !default;
+
+    // header dark drop search
+    $header-dark-drop-search-input_color: #868686 !default;
+    $header-dark-drop-search-input_bg: transparent !default;
+    $header-dark-drop-search-border-color: $header-dark-drop-search-input_color !default;
+    $header-dark-drop-search-active-border-color: $custom_color !default;
+    $header-dark-drop-search-popular_color: #fff !default;
+    $header-dark-drop-search-popular-link_color: #868686 !default;
+    $header-dark-drop-search-popular-link-hover_color: $custom_color !default;
+
+    // header dark drop minicart
+    $header-dark-drop-minicart-total_color: #fff !default;
+    $header-dark-drop-minicart-drop_bg: rgba(30, 30, 30, 1) !default;
+    $header-dark-drop-minicart-drop_border_color: #373737 !default;
+    $header-dark-drop-minicart-drop-link-color: $custom_color !default;
+    $header-dark-drop-minicart-drop-link-hover_color: #fff !default;
+    $header-dark-drop-minicart-drop_text_color: #868686 !default;
+    $header-dark-drop-minicart-drop-bold_text_color: #fff !default;
+    $header-dark-drop-minicart-drop_title_color: #fff !default;
+    $header-dark-drop-minicart-product-category_color: #868686 !default;
+    $header-dark-drop-minicart-product-category-hover_color: $custom_color !default;
+    $header-dark-drop-minicart-product-name_color: #fff !default;
+    $header-dark-drop-minicart-product-name-hover_color: $custom_color !default;
+    $header-dark-drop-minicart-action_color: $custom_color !default;
+    $header-dark-drop-minicart-action-hover_color: #fff !default;
+    $header-dark-drop-minicart-product_border_color: #2d2d2d !default;
+    $header-dark-drop-minicart-drop-total_bg: #2a2a2a !default;
+    $header-dark-drop-minicart-drop-total_text_color: #7c7c7c !default;
+    $header-dark-drop-minicart-drop-total-summa_text_color: #fff !default;
+
+    // header dark drop sticky
+    $header-dark-drop-sticky_bg: #1d1d1d !default;
+    $header-dark-drop-sticky-desktop-menu_color: $desktop-dark-menu_color !default;
+    $header-dark-drop-sticky-desktop-menu-hover_color: $desktop-dark-menu-hover_color !default;
+    $header-dark-drop-sticky-desktop-menu_line_color: $desktop-dark-menu_line_color !default;
+    $header-dark-drop-sticky-mobile_bg: #1d1d1d !default;
+    $header-dark-drop-sticky-mobile-icon_color: #fff !default;
+
+    // header dark drop mobilemenu
+    $header-dark-drop-mobilemenu_bg: #121212 !default;
+    $header-dark-drop-mobilemenu_border_color: #2d2d2d !default;
+    $header-dark-drop-mobilemenu_nav_bg: #121212 !default;
+    $header-dark-drop-mobilemenu_nav_color: #fff !default;
+    $header-dark-drop-mobilemenu_nav_hover_bg: #000 !default;
+    $header-dark-drop-mobilemenu_nav-hover_color: $custom_color !default;
+    $header-dark-drop-mobilemenu_subnav_color: #656565 !default;
+    $header-dark-drop-mobilemenu_drop-link_color: #fff !default;
+    $header-dark-drop-mobilemenu-drop-close_bg: $custom_color !default;
+    $header-dark-drop-mobilemenu-drop-close_color: #fff !default;
+
+    // header dark drop mobile searh result
+    $header-dark-drop-header_search-results_bg: rgba(30, 30, 30, .97) !default;
+    $header-dark-drop-header_search-results-link_color: #868686 !default;
+    $header-dark-drop-searchpage-results-link-hover_color: #868686 !default;
+
+// header with tab slider
+$header-tabs_bg: $body_bg !default;
+$header-tabs_color: #000 !default;
+$header-tabs-active_color: #fff !default;
+
+// promo topline
+$promo-topline_text_color: #fff !default;
+$promo-topline-link_color: #000 !default;
+$promo-topline-link-hover_color: #000 !default;
+$promo-topline-close_color: #fff !default;
+
+// footer
+$footer_bg: transparent !default;
+$footer_color: $body_text_color !default;
+$footer_title_color: $heading_color !default;
+$footer_link_color: $text_color_light !default;
+$footer_link-hover_color: $custom_color !default;
+$footer_mail-link_color: $custom_color !default;
+$footer_mail-link-hover_color: $text-color_dark !default;
+$footer_line_color: #f3f4f6 !default;
+
+$footer-social_color: $text_color_lighter !default;
+$footer-social-hover_color: $custom_color !default;
+
+$footer-shop-feature-icon_color: $custom_color !default;
+$footer-shop-feature_text_color: $body_text_color !default;
+
+$footer-subscribe-row_bg: $custom_color !default;
+$footer-subscribe-row_text_color: #fff !default;
+$footer-subscribe-row-link_color: #fff !default;
+$footer-subscribe-row-link-hover_color: #000 !default;
+$footer-subscribe-row-success-message_color: #fff !default;
+$footer-subscribe-row-input_bg: rgba(255, 255, 255, .3) !default;
+$footer-subscribe-row-input_color: #fff !default;
+
+$footer-payment-icons_bg: #fff !default;
+
+// footer dark FOOTER 02, FOOTER 03, FOOTER 08
+$footer-dark_bg: #161717 !default;
+$footer-dark_color: #868686 !default;
+$footer-dark_title_color: #fff !default;
+$footer-dark_link_color: #868686 !default;
+$footer-dark_link-hover_color: #fff !default;
+$footer-dark_mail-link_color: $custom_color !default;
+$footer-dark_mail-link-hover_color: #fff !default;
+$footer-dark_line_color: #2e2f2f !default;
+
+$footer-dark_social_color: #fff !default;
+$footer-dark_social-hover_color: $custom_color !default;
+
+$footer-dark-shop-feature-icon_color: $custom_color !default;
+$footer-dark-shop-feature_text_color: #fff !default;
+
+// footer mini FOOTER 13
+$footer-mini_bg: #65cbfc !default;
+$footer-mini_color: #fff !default;
+$footer-mini_link_color: #fff !default;
+$footer-mini_link-hover_color: #fff !default;
+
+// back to top button
+$back-to-top_color: #fff !default;
+$back-to-top_bg: $custom_color !default;
+$back-to-top-hover_bg: $custom_color !default;
+
+// main slider
+$slide_bg: $body_bg !default;
+$slide-content_text_color: #fff !default;
+$slide-content-number_text_color: #e1dde5 !default;
+$slide-content-number-text_text_color: #868686 !default;
+$slide-content-button_color: #fff !default;
+$slide-content-button-line_color: #fff !default;
+$slide_nav_color: #fff !default;
+
+$slide-content-dark_text_color: #000 !default;
+$slide-content-dark-button_color: #000 !default;
+$slide-content-dark-button-line_color: #000 !default;
+$slide-dark_nav_color: #000 !default;
+
+$slide-text-border_color: rgba(255, 255, 255, .75) !default;
+
+// product item
+$product_bg: #fff !default;
+$product-horizontal_bg: #fff !default;
+$product_aspect_ratio: 118% !default;
+$product-title_color: $text_color_middle !default;
+$product-title-hover_color: $custom_color !default;
+$product-category_color: $text_color_lighter !default;
+$product-option-label_color: $text_color_lighter !default;
+$product-icon-link_color: $custom_color !default;
+$product-icon-link-hover_color: $text_color_dark !default;
+$product_border_color: $decor_border_color_darker !default; // promo product, horizontal product
+$product-rating_color: $text_color_lighter !default;
+$product-rating-fill_color: #ffc427 !default;
+
+$product-vertical-divider_border_color: $decor_border_color !default;
+
+$product-simple-divider_border_color: #e0e0e1 !default;
+
+$product-tabs_color: $text_color_dark !default;
+$product-tabs-hover_color: $custom_color !default;
+
+$product-price_actual_color: #000 !default;
+$product-price_old_color: $custom_color !default;
+$product-price-comment_color: $text_color_lighter !default;
+$product-price-mobile_bg: transparent !default;
+$product-price-mobile_actual_color: #000 !default;
+$product-price-mobile_old_color: $custom_color !default;
+
+$label_stock_bg: #ffc427 !default;
+$label_stock_color: #fff !default;
+$label_new_bg: #15c979 !default;
+$label_new_color: #fff !default;
+$label_sale_bg: #e53d60 !default;
+$label_sale_color: #fff !default;
+$label_wishlist_bg: $custom_color !default;
+$label_wishlist_color: #fff !default;
+
+// product page
+$product-page-video_bg: $body_bg !default;
+$product-page-rating_color: $text_color_lighter !default;
+$product-page-rating-fill_color: $custom-color !default;
+$product-page-sku_color: $text_color_dark !default;
+$product-page-availability_color: $text_color_dark !default;
+$product-page-qty-max_color: $text_color_dark !default;
+$product-page-info-divider_border_color: $decor_border_color !default;
+
+$product-page-info-icon-link_color: $custom_color !default;
+$product-page-info-icon-link-hover_color: $text_color_dark !default;
+
+$product-page-info-promo-text_font_family: $heading_font_family !default;
+$product-page-info-promo-text01_color: $text_color_dark !default;
+$product-page-info-promo-text02_color: $text_color_dark !default;
+$product-page-info-promo-text03_color: #e53d60 !default;
+
+$product-page-prevnext-arrow_color: #c5c5c5 !default;
+$product-page-prevnext-arrow-hover_color: #161717 !default;
+
+$product-page-info-description_bg: transparent !default; // product style 2
+$product-page-info-description_border_color: $decor_border_color_darker !default; // product style 2
+
+$product-page-info-option-link_color: $text_color_dark !default; // size swatch link
+$product-page-info-option-link-hover_color: $custom_color !default; // size swatch link
+
+$product-page-size-list_color: $text_color_light !default;
+$product-page-size-list_border_color: $decor_border_color_darker !default;
+$product-page-size-list-absent_color: $text_color_light !default;
+$product-page-size-list-absent_border_color: $decor_border_color_darker !default;
+$product-page-size-list-active_color: $custom_color !default;
+$product-page-size-list-active_border_color: $custom_color !default;
+
+$product-page-price_actual_color: $text_color_dark !default;
+$product-page-price_old_color: $custom_color !default;
+$product-page-title_color: $heading_color !default;
+$product-page-title_font_family: $heading_font_family !default;
+$product-page-option-label_color: $text_color_light !default;
+
+// sidebar filters
+$sidebar-block_border_color: $decor_border_color !default;
+$sidebar-block-title_color: $heading_color !default;
+$sidebar-block-title-hover_color: $custom_color !default;
+
+$sidebar-selected-count_color: $text_color_light !default;
+$sidebar-selected-count-number_color: $text_color_dark !default;
+
+$sidebar-clear-filters_color: #e53d60 !default;
+$sidebar-clear-filters-hover_color: $custom_color !default;
+
+$sidebar-selected-filters_color: $text_color_dark !default;
+$sidebar-selected-filters-hover_color: $custom_color !default;
+
+$sidebar-option-color-name_color: $text_color_light !default;
+$sidebar-option-color-name-active_color: $custom_color !default;
+$sidebar-option-color-active_border-color: $custom_color !default;
+
+$sidebar-option-list_color: $text_color_light !default;
+$sidebar-option-list-active_color: $custom_color !default;
+
+$sidebar-option-size_color: $text_color_light !default;
+$sidebar-option-size_border_color: $decor_border_color_darker !default;
+$sidebar-option-size-active_color: $custom_color !default;
+$sidebar-option-size-active_border_color: $custom_color !default;
+
+// filter row
+$filter-row_color: $text_color_light !default;
+$filter-row_bg: transparent !default;
+$filter-row-border_color: $decor_border_color_darker !default;
+$filter-row-icon_color: #cdd1d9 !default;
+$filter-row-icon-active_color: $custom_color !default;
+
+// filter mobile
+$filter-mobile-top-info_bg: #f8f8fa !default;
+$filter-mobile-top-info_border_color: $decor_border_color_darker !default;
+$filter-mobile-row_color: $text_color_dark !default;
+
+$filter-mobile_bg: #fff !default;
+
+// banners left/right (fashion 2)
+$banners-left-right-title_color: #fff !default;
+$banners-left-right-button_color: #fff !default;
+$banners-left-right-button-line_color: $custom_color !default;
+$banners-left-right-link_color: #fff !default;
+$banners-left-right-link-hover_color: $custom_color !default;
+
+//testimonials
+$testimonials_color: $body_text_color !default;
+$testimonials_name_color: $heading_color !default;
+$testimonials_date_color: $text_color_light !default;
+
+// shop features
+$shop_features_color: $text_color_dark !default;
+$shop_features_light_color: #fff !default;
+
+// inside carousel
+$inside-car-arrow-bg: #fff !default;
+$inside-car-arrow-hover-bg: #fff !default;
+$inside-car-arrow-color: #000 !default;
+$slideSpeed: 0.3s !default;
+
+// slick carousel arrows
+$slick-arrow-no-bg_color: #2D2C2C !default;
+$slick-arrow_bg: rgba(255, 255, 255, 0.7) !default;
+$slick-arrow-hover_bg: rgba(255, 255, 255, 1) !default;
+$slick-arrow_color: #2D2C2C !default;
+$slick-arrow_color-dark: #000 !default;
+$slick-dots-button: #bfbfbf !default;
+
+// full page dot navigation
+$full-page-dot_color: #0f0f0f !default;
+$full-page-dot-active_color: $custom_color !default;
+
+// shop features
+$shop-features-style-1_border_color: $decor_border_color_darker !default;
+$shop-features-style-1-icon_color: $text_color_dark !default;
+$shop-features-style-1-text1_color: $text_color_dark !default;
+$shop-features-style-1-text2_color: $body_text_color !default;
+
+$shop-features-style-2-text_color: $text_color_dark !default;
+$shop-features-style-2-text-light_color: #fff !default;
+$shop-features-style-2-hover_bg: $custom_color !default;
+
+$shop-features-style-3-text_color: $text_color_dark !default;
+$shop-features-style-3-text-light_color: #fff !default;
+$shop-features-style-3-hover_bg: $custom_color !default;
+
+$shop-features-style-3-1_bg: $custom_color !default;
+$shop-features-style-3-1-center_bg: #c4a7d2 !default;
+$shop-features-style-3-1-first_bg: $custom_color !default;
+
+$shop-features-style-4_border_color: $decor_border_color_darker !default;
+$shop-features-style-4-icon_color: $text_color_dark !default;
+$shop-features-style-4-text1_color: $text_color_dark !default;
+$shop-features-style-4-text2_color: $body_text_color !default;
+
+$shop-features-style-5_bg: rgba(0, 0, 0, .7) !default;
+$shop-features-style-5-icon_color: $text_color_dark !default;
+$shop-features-style-5-text1_color: $text_color_dark !default;
+$shop-features-style-5-text2_color: $body_text_color !default;
+$shop-features-style-5-text-light_color: #fff !default;
+
+$shop-features-modal-text1_color: $text_color_dark !default;
+$shop-features-modal-text2_color: $text_color_dark !default;
+$shop-features-modal-icon_color: $text_color_dark !default;
+
+// subscribe form
+$subscribe-form-style1-title_color: $text_color_dark !default;
+$subscribe-form-style1-button_color: $text_color_dark !default;
+
+$subscribe-form-whitecolor-text_color: #fff !default;
+$subscribe-form-whitecolor-title_color: #fff !default;
+$subscribe-form-whitecolor-button_color: #fff !default;
+
+// countdown
+$countdown-box_text_color: #fff !default;
+$countdown-box_bg: $custom_color !default;
+
+$countdown-box-cooming_text_color: #fff !default;
+$countdown-box-cooming_bg: rgba($custom_color, .7) !default;
+
+$countdown-box-full_text_color: #fff !default;
+$countdown-box-full_bg: $custom_color !default;
+
+// instagram
+$instagram-icon_color: #fff !default;
+$instagram-hover_bg: #000 !default;
+$instagram-grid-hover_bg: $custom_color !default;
+
+$instagram-feed-text_color: #000 !default;
+$instagram-feed-text_bg: #fff !default;
+
+// tooltip
+$tooltip_bg: #fff !default;
+$tooltip_text_color: $text_color_light !default;
+$tooltip_border_color: $decor_border_color_darker !default;
+$tooltip_border_width: 1px !default;
+$tooltip-arrow-width: 5px !default;
+$tooltip-arrow-border-width: $tooltip-arrow-width + $tooltip-border-width !default;
+
+// modal
+$modal_bg: $body_bg !default;
+
+$modal-info_text_color: $text_color_dark !default;
+$modal-info-link_color: $custom_color !default;
+$modal-info-success_color: #77b900 !default;
+$modal-info-error_color: #e53d60 !default;
+
+$modal-header_bg: $custom_color !default;
+$modal-header_text_color: #fff !default;
+
+$newsletter-modal_bg: #fff !default;
+
+$fancybox-light_bg: #fff !default;
+$fancybox-caption_text_color: $heading_color !default;
+$fancybox-button_bg: $custom_color !default;
+$fancybox-button_color: #fff !default;
+
+// cart page
+$cart-page-total_bg: #fbfbfb !default;
+
+// timeline
+$timeline-item_text_color: #fff !default;
+
+// gallery
+$gallery-style-1_text_color: #fff !default;
+$gallery-style-1_bg: rgba(0, 0, 0, .3) !default;
+
+$gallery-style-2_text_color: #000 !default;
+
+$gallery-item-link_bg: rgba(255, 255, 255, .7) !default;
+$gallery-item-link-hover_bg: rgba(255, 255, 255, 1) !default;
+$gallery-item-link_color: #000 !default;
+
+// count banner
+$count-banner-link_bg: #000 !default;
+$count-banner1-txt1_color: #fff !default;
+$count-banner1-txt2_color: #fff !default;
+$count-banner1-span_color: $custom_color !default;
+
+$count-banner2_bg: rgba(0, 0, 0, .7) !default;
+$count-banner2_border_color: #fff !default;
+$count-banner2-txt1_color: #fff !default;
+$count-banner2-txt2_color: $custom_color !default;
+
+$count-banner2-count-label_color: #a1a0a0 !default;
+$count-banner2-count_color: #fff !default;
+$count-banner2-count_bg: rgba(255, 255, 255, .35) !default;
+
+// collection item with hover caption
+$collection-item_color: $body_text_color !default;
+$collection-item-title_color: $heading_color !default;
+$collection-item-hover-link_color: #fff !default;
+$collection-item-hover-button_color: #fff !default;
+
+// collection item text on the image
+$collection-box-title_color: #fff !default;
+$collection-box-subtitle_color: #fff !default;
+
+// collection carousel
+$collection-carousel-item-title_color: #fff !default;
+
+$collection-carousel2-item-caption_bg: #fff !default;
+$collection-carousel2-item-title_color: #000 !default;
+$collection-carousel2-item-button_color: $button_color !default;
+
+// product single slider
+$product-single-slider-item_bg: #fff !default;
+$product-single-slider-item-tag_color: $body_text_color !default;
+$product-single-slider-item-info_color: $body_text_color !default;
+$product-single-slider-item-title_color: $text_color_dark !default;
+$product-single-slider-item-price_color: $text_color_dark !default;
+
+$product-single-slider2-item-tag_color: $body_text_color !default;
+$product-single-slider2-item-info_color: $body_text_color !default;
+$product-single-slider2-item-title_color: $text_color_dark !default;
+$product-single-slider2-item-price_color: $text_color_dark !default;
+
+// big slide with caption
+$big-slide-caption_bg: rgba(255, 255, 255, .85) !default;
+$big-slide-caption_color: $body_text_color !default;
+$big-slide-title_color: $heading_color !default;
+$big-slide-subtitle_color: $heading_color !default;
+
+// tabs
+$tabs-link_color: $text_color_dark !default;
+$tabs-link-active_color: $text_color_dark !default;
+$tabs-link-hover_bg: $decor_border_color !default;
+$tabs-border_color: $decor_border_color_darker !default;
+
+$tabs2-active-border_color: $custom_color !default;
+$tabs2-active_bg: $custom_color !default;
+$tabs2-active_color: #fff !default;
+
+$tabs3-active_color: $custom_color !default;
+
+$panel-heading-border_color: $decor_border_color !default;
+$panel-heading-arrow-border_color: $decor_border_color_darker !default;
+$panel-heading-link_color: $text_color_dark !default;
+$panel-heading-link-active_color: $custom_color !default;
+
+// faq tabs
+$faq-panel-heading-link_color: $panel-heading-link_color !default;
+$faq-panel-heading-link-active_color: $panel-heading-link-active_color !default;
+
+// simple filter tabs
+$simple-filter-link_color: $text-color_dark !default;
+$simple-filter-link-active_color: $custom_color !default;
+$simple-filter-text_color: $text_color_lighter !default;
+
+// brand carousel with background
+$brand-carousel-title_color: #000;
+$holder_bg-3: #f9f9fa !default; // brand carousel background
+
+// category with bg
+$category-with-bg_bg: #f8f8fa !default;
+$category-with-bg_color: #000 !default;
+
+// card links
+$card-links_bg: #f8f8fa !default;
+$card-links_color: #707071 !default;
+$card-links-hover_color: #000 !default;
+
+// offset margin
+
+$holder_margin: 65px !default;
+$holder_margin-sm: 45px !default;
+$holder_margin-xs: 35px !default;
+
+$col-mt: 15px !default;
+$col-mt-sm: 15px !default;
+$col-mt-xs: 10px !default;
+
+// breakpoints
+
+$screen-xs-prd: 600px !default; // product from 3 to 2 breikpoint
+
+$screen-sm-min: 480px !default;
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-md-min: 768px !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-lg-min: 992px !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
+$screen-xl-min: 1200px !default;
+$screen-lg-max: ($screen-xl-min - 1) !default;
+$screen-xl-max: 1599px !default;
+
+$screen-md-max: ($screen-lg-min - 1) !default;
+$mobile-menu-breikpoint: $screen-lg-min !default;
+$mobile-filter-breikpoint: $screen-lg-min !default;
+
+$container-sm: 100% !default;
+$container-md: 100% !default;
+$container-lg: 940px !default;
+$container-xl: 1170px !default;
+
+$mobile-slider-breikpoint: 481px;

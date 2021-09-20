@@ -1,0 +1,18 @@
+/* instagram rtl */
+
+.instagram-feed-full {
+  a {
+    float: right;
+    &:before {
+      right: 50%;
+      left: auto;
+      margin: -20px -20px 0 0;
+    }
+  }
+}
+
+.instagram-grid {
+  a {
+    float: right;
+  }
+}

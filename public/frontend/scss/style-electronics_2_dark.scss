@@ -1,0 +1,10 @@
+$custom_color: #756dec;
+
+$loader-dot-1_bg: $custom_color;
+$loader-dot-2_bg: #000;
+$loader-dot-3_bg: $custom_color;
+
+@import "_variables-dark.scss";
+@import "_mixins.scss";
+
+@import "_style-all.scss";

@@ -1,0 +1,22 @@
+/* buttons rtl */
+
+.btn {
+  [class*="icon-"]:not(:only-child):not(:last-child) {
+    padding-right: 0;
+    padding-left: 10px;
+    display: inline-block;
+  }
+}
+
+.btn-decor + .btn-decor {
+  margin-left: 0;
+  margin-right: 45px;
+  @media screen and (max-width: $screen-sm-max) {
+    margin-left: 0;
+    margin-right: 24px;
+  }
+}
+
+.btn-toolbar .btn, .btn-toolbar .btn-group, .btn-toolbar .input-group {
+  float: right;
+}

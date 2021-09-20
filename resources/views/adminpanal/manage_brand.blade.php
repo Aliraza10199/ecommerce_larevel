@@ -5,16 +5,7 @@
 
 @section('container')
 
-@if($id>0)
-@php
-$image_required="";  
-@endphp
-     
- @else
-  @php
- $image_required="required";
- @endphp
- @endif 
+
  
  @error('image.*')
  <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show">
@@ -64,23 +55,43 @@ $image_required="";
 
                                     <div class="form-group">
                                         <label for="image" class="control-label mb-1">Image</label>
-                                        <input id="image" name="image"  type="file" class="form-control" aria-required="true" aria-invalid="false" {{{$image_required}}}>
+                                        <input id="image" name="image"  type="file" class="form-control" aria-required="true" aria-invalid="false" >
                                        
                                         {{-- @if($image!='')
                                         <img  width="50px" src="{{asset('storage/media/'.$image)}}"/></td>
                                          @endif
-                                    <td class="process"> --}}
+                                      <td class="process"> --}}
 
                                         @error('image')
                                         <div class="alert alert-primary" role="alert">
-                                    {{$message}} 
-                                    </div>
+                                         {{$message}} 
+                                         </div>
                                         @enderror
                                         <td>@if($image!='')
                                             <img  width="50px" src="{{asset('storage/media/brand/'.$image)}}"/>
                                              @endif
                                         </td>
                                 </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                        <label for="is_home" class="control-label mb-1">Show in Home page</label>
+                                        <input id="is_home" name="is_home"  type="checkbox"  aria-required="true" aria-invalid="false" {{$is_home_selected}}>
+                                          
+                                    {{--           @if($category_image!='')
+                                                <img  width="50px" src="{{asset('storage/media/'.$image)}}"/></td>
+                                            @endif
+                                        <td class="process"> --}}
+
+                                        @error('is_home')
+                                        <div class="alert alert-primary" role="alert">
+                                        {{$message}} 
+                                        </div>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+                                  
                                   
                                     <div>
                                         <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block">

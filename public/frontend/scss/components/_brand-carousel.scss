@@ -1,0 +1,91 @@
+/* brand carousel */
+
+.brand-grid {
+  @include justify-content(center);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  [class*='col'] {
+    flex-grow: 0;
+  }
+  a {
+    display: block;
+    margin-top: 5px;
+    text-decoration: none;
+    text-align: center;
+    &:hover {
+      img {
+        opacity: .75;
+      }
+    }
+  }
+  img {
+    max-width: 150px;
+    @include transition(.2s);
+    @media (max-width: $screen-md-max) {
+      max-width: 125px;
+    }
+  }
+}
+.brand-carousel {
+  margin: 30px 0;
+  padding: 0;
+  list-style: none;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  li {
+    float: left;
+    margin: 0 15px;
+    img {
+      max-width: 100%;
+      margin: 0 auto;
+      @include transition(.2s);
+    }
+    &:hover {
+      img {
+        opacity: .75;
+      }
+    }
+  }
+  .slick-track {
+    @include flexbox();
+    @include align-items(center);
+  }
+}
+
+.brand-carousel:not(.slick-initialized) {
+  opacity: 0;
+  height: 100px;
+  overflow: hidden !important;
+}
+
+.brand-carousel.slick-initialized {
+  opacity: 1;
+  @include transition(opacity .5s ease .75s);
+}
+
+.brand-carousel.slick-arrows-right {
+  overflow: visible;
+  min-height: 70px;
+  @include flexbox();
+  @include align-items(center);
+}
+
+.brand-carousel-title {
+  @include flexWidth(125px);
+  padding-left: 30px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+  font-family: $heading_font_family;
+  color: $brand-carousel-title_color;
+  text-align: right;
+  & + * {
+    margin-left: 15px;
+    width: calc(100% - 155px);
+  }
+}

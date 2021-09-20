@@ -1,0 +1,131 @@
+/* mobilemenu rtl*/
+
+@media screen and (min-width: $mobile-menu-breikpoint) {
+  .hdr.slide-menu {
+    .mobilemenu-toggle.show-mobile {
+      @include flexbox();
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+.mobilemenu .dropdn.hovered .dropdn-content {
+  left: auto;
+  right: 0;
+}
+
+.mobilemenu-content .dropdn .dropdn-content ul {
+  li {
+    text-align: right;
+  }
+}
+
+.sticky-holder .mobilemenu-toggle {
+  left: auto;
+  right: 15px;
+}
+
+.mobilemenu ul.nav {
+  li {
+    a {
+      padding-left: 50px;
+      padding-right: 20px;
+    }
+    .arrow {
+      margin-left: 0;
+      margin-right: -50px;
+      left: 0;
+      right: auto;
+    }
+    .arrow:before {
+      @include rotate(180deg);
+    }
+    &.mmenu-submenu-open > .arrow {
+      @include rotate(0deg);
+    }
+    ul {
+      a {
+        padding-left: 0;
+        padding-right: 40px;
+      }
+      ul a {
+        padding-left: 0;
+        padding-right: 60px;
+      }
+      ul ul a {
+        padding-left: 0;
+        padding-right: 80px;
+      }
+      ul ul ul a {
+        padding-left: 0;
+        padding-right: 100px;
+      }
+      ul ul ul a {
+        padding-left: 0;
+        padding-right: 120px;
+      }
+    }
+  }
+}
+
+.mobilemenu-content {
+  left: auto;
+  right: 0;
+  -webkit-transform: translateX(110%);
+  transform: translateX(110%);
+}
+
+.mobilemenu-toggle {
+  span {
+    padding-left: 0;
+    padding-right: 7px;
+  }
+}
+
+@media (max-width: ($mobile-menu-breikpoint - 1)) {
+  .mobilemenu:after,
+  .minicart .minicart-drop:after,
+  .dropdn.dropdn_account .dropdn-content:after,
+  .row:not(.prd-block) .fixed-col:after {
+    right: 0;
+    left: auto;
+  }
+  .mobilemenu .dropdn:not(.is-hovered) .dropdn-link:after {
+    position: absolute;
+    left: 14px;
+    margin: 0;
+    right: auto;
+    top: 14px;
+  }
+  .mobilemenu .dropdn.dropdn_caret.is-hovered .dropdn-link:after,
+  .mobilemenu .dropdn.is-hovered .dropdn-link:after {
+    left: 5px;
+    right: auto;
+  }
+  .mobilemenu .dropdn .dropdn-content ul > li > a img {
+    padding-left: 15px;
+    padding-right: 0;
+  }
+}
+
+@media screen and (min-width: $mobile-menu-breikpoint) {
+  .hdr.slide-menu {
+    .mobilemenu .dropdn:not(.is-hovered) .dropdn-link:after {
+      position: absolute;
+      left: 14px;
+      margin: 0;
+      right: auto;
+      top: 14px;
+    }
+    .mobilemenu .dropdn.dropdn_caret.is-hovered .dropdn-link:after,
+    .mobilemenu .dropdn.is-hovered .dropdn-link:after {
+      left: 5px;
+      right: auto;
+    }
+    .mobilemenu .dropdn .dropdn-content ul > li > a img {
+      padding-left: 15px;
+      padding-right: 0;
+    }
+  }
+}

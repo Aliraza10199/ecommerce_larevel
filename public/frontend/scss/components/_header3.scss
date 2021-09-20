@@ -1,0 +1,53 @@
+/* header 03 */
+@media screen and (min-width: $mobile-menu-breikpoint) {
+  .has-sticky .hdr.hdr-style-3 .search {
+    padding-top: 8px;
+  }
+  .has-scrollmenu .hdr.hdr-style-3 [class*="-menu-scroll"] {
+    display: none;
+  }
+  .hdr-style-3 {
+    border-bottom: 0;
+    .logo-holder, .logo-holder-s {
+      @include flexWidth(25%);
+    }
+    .search {
+      margin-left: -15px;
+      padding: 17px 0 7px;
+    }
+    .nav-holder-s .search {
+      margin-left: 0;
+    }
+    .menu-toggle {
+      float: left;
+    }
+    .menu-toggle + .logo {
+      float: left;
+      margin-left: 15px;
+    }
+    .sticky-holder .mobilemenu-toggle {
+      position: relative;
+      left: 0;
+    }
+    .search-results {
+      background-color: #fff;
+      padding: 15px 15px;
+    }
+  }
+  body:not(.has-scrollmenu) .hdr-style-3 {
+    .nav-holder, .search-holder, .nav-holder-s {
+      overflow: visible;
+    }
+  }
+}
+
+@include respond-to(lg-only) {
+  .hdr-style-3 .search {
+    padding: 17px 0 7px;
+  }
+}
+
+.hdr.hdr-style-3 .sticky-holder .mobilemenu-toggle {
+  @include flexbox();
+  @include align-items(center);
+}

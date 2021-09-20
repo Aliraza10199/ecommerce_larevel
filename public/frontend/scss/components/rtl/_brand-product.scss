@@ -1,0 +1,18 @@
+/* brand product rtl */
+
+.brand-prd-image {
+  @media screen and (min-width: $screen-md-min) {
+    float: right;
+  }
+}
+
+.brand-prd-info {
+  float: right;
+}
+
+@media screen and (min-width: $screen-md-min) {
+  .aside .brand-prd-carousel.vert-dots .slick-dots {
+    left: 5px;
+    right: auto;
+  }
+}

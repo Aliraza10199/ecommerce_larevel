@@ -1,0 +1,124 @@
+.tags-list {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  &:not(:first-child) {
+    margin-top: 40px;
+    @include respond-to(md-only) {
+      margin-top: 30px;
+    }
+    @include respond-to(sm-only) {
+      margin-top: 25px;
+    }
+    @include respond-to(xs-only) {
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+  }
+  li {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 6px;
+    padding: 0;
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 5px;
+      margin-right: 1px;
+    }
+    a {
+      @include transition (all .2s ease);
+      background: $tag_bg;
+      border-color: $tag_border_color;
+      border-style: solid;
+      border-width: 1px;
+      color: $tag_text_color;
+      display: block;
+      font-size: 12px;
+      line-height: 23px;
+      padding: 0 14px;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      &:hover, &:focus {
+        background: $tag_hover_bg;
+        border-color: $tag_hover_border_color;
+        color: $tag_hover_text_color;
+      }
+    }
+  }
+  a:after {
+    content: "\e117";
+    display: none;
+    font-family: 'icomoon';
+    font-size: 12px;
+    padding: 0 0 0 6px;
+    position: relative;
+    top: 1px;
+  }
+  li.active {
+    a {
+      background: $tag_active_bg;
+      border-color: $tag_active_border_color;
+      color: $tag_active_text_color;
+    }
+    a:after {
+      display: inline-block;
+    }
+  }
+}
+
+.aside-block .tags-list {
+  &:not(:first-child) {
+    margin-top: 0;
+  }
+}
+
+.banners-list {
+  @include flexbox();
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0 -7px;
+  padding: 0;
+  li {
+    @include flexWidth(calc(50% - 7px));
+    margin: 0 7px 7px 0;
+    a {
+      background-position: center center;
+      background-size: cover;
+      display: block;
+      font-size: 0;
+      line-height: 0;
+      padding-bottom: 100%;
+      position: relative;
+      text-decoration: none;
+      width: 100%;
+      span {
+        @include align-items(center);
+        @include flexbox();
+        @include justify-content(center);
+        @include transition (.2s);
+        border-color: rgba(#fff, 0);
+        border-style: solid;
+        border-width: 2px;
+        bottom: 4px;
+        color: #fff;
+        font-family: $heading_font_family;
+        font-size: 14px;
+        font-weight: 600;
+        left: 4px;
+        letter-spacing: 1px;
+        line-height: 1em;
+        overflow: hidden;
+        position: absolute;
+        right: 4px;
+        text-transform: uppercase;
+        top: 4px;
+        z-index: 1;
+      }
+    }
+    &.active a, a:hover {
+      span {
+        border-color: #fff;
+      }
+    }
+  }
+}
